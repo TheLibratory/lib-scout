@@ -34,7 +34,9 @@ nav li {
 	border: 1px solid black;
 	margin: 0;
 	font-family: Verdana;
-	font-size: 13px;
+	font-size: 1em;
+	text-transform: uppercase;
+	font-weight: bolder;
 }
 
 #search2 {
@@ -59,4 +61,13 @@ nav li {
 	height: 2em; 
 	background-color: #8bc8c6;
 	border-radius: 0 0 8px 8px;
+}
+
+.text-stroke-white {
+    color: white;
+    text-shadow:
+	    -1px -1px 0 #000,
+	    1px -1px 0 #000,
+	    -1px 1px 0 #000,
+	    1px 1px 0 #000;
 }
