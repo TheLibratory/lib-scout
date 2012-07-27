@@ -1,6 +1,14 @@
 <html>
 <head>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
 	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<!--[if gte IE 9]>
+	  <style type="text/css">
+	    .gradient {
+	       filter: none;
+	    }
+	  </style>
+	<![endif]-->
 </head>
 
 <body>
@@ -15,20 +23,20 @@
 		<div id="leftside">
 			<nav id="searchtabs">
 				<ul class="text-stroke-white">
-					<li class="active">All</li>
-					<li class="inactive">Articles</li>
-					<li class="inactive">Catalog</li>
-					<li class="inactive">Databases</li>
-					<li class="inactive">Journals</li>
-					<li class="inactive">Site Search</li>
+					<li class="active"><a href="#">All</a></li>
+					<li class="inactive"><a href="#">Articles</a></li>
+					<li class="inactive"><a href="#">Catalog</a></li>
+					<li class="inactive"><a href="#">Databases</a></li>
+					<li class="inactive"><a href="#">Journals</a></li>
+					<li class="inactive"><a href="#">Site Search</a></li>
 				</ul>
 			</nav>
 
-			<div id="search2">
+			<div id="search2" class="gradient">
 				<div id="searchtop">
 					<form>
 					<img src="img/logo.png" style="vertical-align: middle" />
-					<input type="textfield" size="75"></input>
+					<input type="textfield"></input>
 					</form>
 				</div>
 				<div id="searchbottom">this is some junk</div>
