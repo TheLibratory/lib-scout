@@ -1,0 +1,56 @@
+/********************/
+/*Search Box used on*/
+/*****Home Page*****/ 
+/**and 2nd template**/
+/********************/
+  
+/************************/
+/**Search Box IE6 CSS**/
+/************************/
+
+#search-wrapper {
+	width:488px;
+	height:193px;
+	padding:10px 0 0 10px;
+}
+#search-wrapper-top {
+	margin-bottom:-4px;
+	background-image:url(/graphics/search-box/search-wrapper-top.gif);
+}
+#search-wrapper-bg {
+   width:420px;  
+}
+#search-wrapper-rght {
+   width:8px;
+   margin:-3px 0 0 427px; 
+   height:143px;
+}
+#search-wrapper-bottom {
+	margin-top:-10px;
+	background-image:url(/graphics/search-box/search-wrapper-bottom.gif);
+}
+#search-wrapper ul {
+	width:380px;
+}
+#search-wrapper li a{
+font-size:11px;
+} 
+#search-home {
+	width:420px;
+	height:107px;
+}
+
+#search-home #query {
+	width: 310px; 
+}
+#search-home input.find {
+	top:4px;
+}
+p.search-home-links  {
+   margin:-10px 0 0 6px;
+	line-height:14px;
+	width:390px;
+}
+.moredatabases {
+	margin:2px 0 0 6px;
+} 

@@ -1,0 +1,27 @@
+/********************/
+/*Search Box used on*/
+/*****Home Page*****/
+/**and 2nd template**/
+/********************/
+  
+/************************/
+/**Search Box IE7 CSS**/
+/************************/
+
+#search-wrapper {
+	width:468px;
+	padding:15px 15px 30px 20px;
+	border-left:1px;
+	height:165px;
+}
+#search-home input.find {
+	top:3px;
+ }
+p.search-home-links  {
+   margin:-12px 0 0 6px;
+	line-height:12px;
+	width:390px;
+}
+.moredatabases {
+ margin:0px 0 0 6px;
+} 

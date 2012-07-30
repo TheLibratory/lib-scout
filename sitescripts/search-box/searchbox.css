@@ -1,0 +1,244 @@
+/********************/
+/*Search Box used on*/
+/*****Home Page*****/ 
+/**and 2nd template**/
+/********************/
+  
+/************************/
+/**Search Box Main CSS**/
+/************************/
+#search-wrapper {
+	position:relative;
+	height:190px;
+	width:468px;
+	font-weight:9;
+	padding:15px 15px 15px 20px;
+	border-left:1px solid #666666;
+	background-image: url(/graphics/search-box/main-bg.png);
+	background-position:bottom;
+	clear:left;
+}	
+#search-wrapper-top {
+	position:relative;
+	width:458px;  
+	height:32px;
+	margin-left:0px;
+	background-image:url(/graphics/search-box/search-wrapper-top.png);
+	background-position:top left;
+	background-repeat:no-repeat;
+}
+#search-wrapper-top .libsearch {
+	margin:6px 0px 0px 8px;
+}
+#search-wrapper-bg {
+	position:relative;
+	width:428px;  
+	min-height:128px;
+	margin-left:5px;
+	padding:3px 0 10px 10px;
+	background-image:url(/graphics/search-box/search-wrapper-bg.png);
+	background-repeat:repeat-x repeat-y;
+}
+#search-wrapper-rght {
+   position:absolute;
+   width:8px;
+   margin:-3px 0 0 427px;  
+   height:143px;
+   background-image:url(/graphics/search-box/search-wrapper-rght.png);
+   background-position:right;
+   background-repeat:no-repeat;
+}
+#search-wrapper-bottom {
+   position:relative;
+   bottom:0;
+   left:0;
+   float:left;
+   width:458px;  
+   height:10px;
+   margin-top:0px;
+   margin-left:0px;
+   background-image:url(/graphics/search-box/search-wrapper-bottom.png);
+   background-position:bottom left;
+   background-repeat:no-repeat;
+}
+
+#search-wrapper ul {
+	position:relative;
+	width:440px;
+	list-style:none;
+	margin:0 0 0 0;
+	padding:4px 0 0 0;
+	height:21px;
+}
+
+#search-wrapper li {
+	position:relative;
+	float:left;
+	margin:0 4px 0 0;
+	font-size:11px;
+	line-height:18px;
+	padding:0;
+	color:#000000;
+	font-weight:9;
+	height:20px;
+}
+
+#search-wrapper li a{
+	color:#000000;
+	margin-left:3px;
+	margin-right:3px;
+	text-decoration:none;
+}
+
+#search-wrapper li:hover a{
+	color:#ffffff;
+	margin-left:3px;
+	margin-right:3px;
+	text-decoration:none;
+}
+
+#catalog {
+   width:91px;
+	background-image:url(/graphics/search-box/tab-books-more-up.png);
+}
+#catalog:hover {
+   width:91px;
+	background-image:url(/graphics/search-box/tab-books-more-down.png);
+}
+#cddvd {
+	width:68px;
+	background-image:url(/graphics/search-box/tab-cds-dvds-up.png);
+}
+#cddvd:hover {
+	width:68px;
+	background-image:url(/graphics/search-box/tab-cds-dvds-down.png);
+}
+#article {
+  width:56px;
+  background-image:url(/graphics/search-box/tab-articles-up.png);
+}
+#article:hover {
+  width:56px;
+  background-image:url(/graphics/search-box/tab-articles-down.png);
+}
+#findarticles {
+  width:56px;
+  background-image:url(/graphics/search-box/tab-articles-up.png);
+}
+#findarticles:hover {
+  width:56px;
+  background-image:url(/graphics/search-box/tab-articles-down.png);
+}
+#site {
+  width:78px;
+  background-image:url(/graphics/search-box/tab-search-site-up.png);
+}
+#site:hover {
+  width:78px;
+  background-image:url(/graphics/search-box/tab-search-site-down.png);
+}
+#databases {
+   background-color:#657270;
+}
+#journal {
+  width:60px;
+  background-image:url(/graphics/search-box/tab-journals-up.png);
+}
+#journal:hover {
+  width:60px;
+  background-image:url(/graphics/search-box/tab-journals-down.png);
+}
+/*#quick {
+background-image:url(/graphics/search-box/quicklinks-tab.png);
+}*/
+
+/*#quick_morph {
+	position:absolute; 
+	overflow:hidden;
+	margin-left:300px;
+	width:0;
+	height:0;
+	color:#ffffff;
+	background-image:url(/graphics/search-box/box.png);
+	z-index:100;  
+}*/
+
+#search-home {
+	position:relative;
+	overflow:hidden;
+	float:left;
+	color:#333333;
+	font-size:12px;
+	width:456px;
+	min-height:78px;
+	padding:0px 0px 0px 10px;
+	margin:0;
+	z-index:100;
+}
+
+#search-home #query {
+	position:relative;
+	margin:4px 0 0 0;
+	width: 314px; 
+	font-size:11px; 
+	color:#000000; 
+	background-color:#ffffff;
+}
+
+#search-home input.find {
+ 	position:relative;
+ 	top:5px;
+ 	left:2px;
+ 	width:80px;
+ 	border:0;
+ 	color:#000000;
+ 	background-color:transparent;
+}
+#search-home label {
+	display:block;
+	margin-top:6px;
+	font-size:14px;
+	line-height:16px;
+	color:#ffffff;
+}
+
+#querylabel {
+	display:block;
+	margin-top:6px;
+	font-size:14px;
+	font-weight:bold;
+	line-height:15px;
+	color:#ffffff;
+}
+
+p.search-home-links  {
+	width:400px;
+	font-size:11px;
+	line-height:14px;
+	margin:8px 0 0 0px;
+	color:#ffffff;
+	border-top:1px solid #354048;
+	padding-top:2px;
+}
+
+p.search-home-links a {
+	font-size:11px;
+	line-height:14px;
+	margin:8px 0 0 0px;
+	color:#ffffff;
+	text-decoration:underline;
+}
+
+.moredatabases {
+	width:446px;
+	font-size:10px;
+	margin:4px 0 0 0px;
+	line-height:12px;
+	color:#ffffff;
+}
+
+.moredatabases a {
+	color:#ffffff;
+	padding:0 2px 0px 2px;
+	text-decoration:underline;
+}
