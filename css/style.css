@@ -84,11 +84,11 @@ nav li {
 	list-style-type: none;
 	display: inline;
 	border-radius: 4px 4px 0 0 ;
-	padding: 3px .5em 0 .5em;
+	padding: 3px .6em 0 .6em;
 	width: 150px;
 	margin: 0;
 	font-family: 'YanoneKaffeesatzBold';
-	font-size: 1.2em;
+	font-size: 1.1em;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	z-index: 100;
@@ -108,9 +108,9 @@ nav li.inactive {
 
 nav li.inactive:hover {
 	background: #52adaa;
-	-webkit-transition: all 0.7s ease;
-	-moz-transition: all 0.7s ease;
-	-o-transition: all 0.7s ease;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
 }
 
 #search2 {
