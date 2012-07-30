@@ -54,8 +54,7 @@ a {
 
 #search-wrap {
 	float: left; 
-	/*width: 550px; */
-	width: 40%;
+	width: 550px;
 	height: 300px;
 	/* border: 2px solid #444; */
 	background: rgba(0,0,0,.55);
