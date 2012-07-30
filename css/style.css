@@ -34,6 +34,11 @@
 
 }
 
+p {
+	font-family: 'Verdana';
+	font-size: .7em;
+}
+
 a {
 	text-decoration: none;
 	border: none;
@@ -94,8 +99,29 @@ nav li {
 	z-index: 100;
 }
 
+#searchbottom-links {
+	list-style-type: none;
+	display: inline;
+	margin: 0;
+	font-family: 'Verdana';
+	font-size: .7em;
+	letter-spacing: 1px;
+	z-index: 100;
+	color: #333;
+}
+
+#searchbottom-links li {
+	float: left;
+	padding: 3px 2em 0 2em;
+}
+
 nav li a {
 	color: #ffffff;
+}
+
+#searchbottom-links li a {
+	color: #333;
+	text-decoration: underline;
 }
 
 nav li.active {
@@ -122,9 +148,9 @@ nav li.inactive:hover {
 	/*height: 220px;*/
 	/*background: linear-gradient(to bottom, #3b679e 0%,#2b88d9 50%,#207cca 51%,#7db9e8 100%);
 	background: -webkit-linear-gradient(top, #3b679e 0%,#2b88d9 30%,#207cca 31%,#7db9e8 100%);*/
-	   -moz-box-shadow: 3px 3px 5px 2px #222;
+	-moz-box-shadow: 3px 3px 5px 2px #222;
 	-webkit-box-shadow: 2px 2px 3px 0px #444;
-	        box-shadow: 2px 2px 3px 0px #444;
+	box-shadow: 2px 2px 3px 0px #444;
 	border-radius: 4px;
 }
 
@@ -146,7 +172,7 @@ nav li.inactive:hover {
 #searchbottom {
 	padding: 10px; 
 	border-top: 1px solid #eeeeee;
-	height: 2em; 
+	/*height: 2em; */
 	background: #8db0ae; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxJSIgc3RvcC1jb2xvcj0iIzhkYjBhZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjE2JSIgc3RvcC1jb2xvcj0iI2E0Y2FjOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4ZGIwYWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -163,4 +189,14 @@ nav li.inactive:hover {
 .text-stroke-white {
 	text-shadow: 1px 1px 2px #777777;
     filter: dropshadow(color=#777777, offx=1, offy=1);
+}
+
+.button {
+	padding:3px;
+	background-color: #55F;
+	border: 1px solid #666;
+	color:#000;
+	text-decoration:none;
+	border-radius: 4px;
+	width: 50px;
 }
