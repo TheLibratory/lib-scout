@@ -9,106 +9,69 @@ else {
 $query = "site";
 }
 
-if ($query=="site"){
+if ($query=="all"){
 echo '
-<form action="/sitescripts/search-box/searchbox.php" method="get">
-        <fieldset><label for="query" id="querylabel">SITE SEARCH</label>
-        <input type="hidden" id="engine" name="engine" value="UTLOL" />
-        <input type="text" name="query" id="query" title="" value="" />
-        <input type="image" src="/graphics/search-box/button-search-up.png" alt="Find" class="find" value="Find" 
-/></fieldset>
-</form>
+			<div id="searchcontent" class="gradient">
+				<div id="searchtop">
+					<div style="float:left;">
+					<img src="img/logo.png" style="vertical-align: middle" />
+					</div>
+					
+					<div style="margin-top:1em;">
+					<form>
+						<input type="textfield" size="50" name="query" id="query">
+						<input class="findbutton" type="button" value="find">
+					
+					</input>
+					<p style="margin-top: 0; float: left;">Find articles, books, media, and more in one search</p>
+					<p style="float: right; margin-top: 0; clear: right;"><a href="#">Advanced Search</a></p>
+					<div style="clear:both;"></div>
+					</form>
+					</div>
+				</div>
+				<div id="searchbottom">
+					<ul id="searchbottom-links">
+						<li><a href="#">scoUT Mobile</a></li>
+						<li><a href="#">Search Tips</a></li>
+						<li><a href="#">Feedback</a></li>
+					</ul>	
+					<div style="clear:both;"></div>
+				</div>
+			</div>
 ';
 }
-else if ($query=="catalog"){
+
+else if ($query=="articles"){
 echo '
-<form action="/sitescripts/search-box/searchbox.php" method="get">
-        <fieldset><label for="query" id="querylabel">BOOKS &amp; MORE</label>
-        <input type="hidden" id="engine" name="engine" value="catalog-vs-worldcat" />
-        <input type="text" name="query" id="query" title="" value=""   />
-        <input type="image" src="/graphics/search-box/button-search-up.png" alt="Find" class="find" value="Find" />
-        <br />
-        <input type="radio" name="subengine" id="search-catalog" value="iiikw" checked="checked" />
-	     <label for="search-catalog" style="display:inline;">Catalog</label>
-	    <input type="radio" name="subengine" id="search-worldcat" value="worldcat" />
-             <label for="search-worldcat" style="display:inline;">WorldCat</label>
-             <input type="radio" name="subengine" id="search-googlebooks" value="googlebooks" />
-             <label for="search-googlebooks" style="display:inline;">Google Books</label>
-	</fieldset>
-</form>
-<p class="search-home-links"><a 
-href="http://catalog.lib.utexas.edu/search/X">ADVANCED CATALOG SEARCH</a></p>
-';
-}
-else if ($query=="all"){
-echo '
-<form action="/sitescripts/search-box/searchbox.php" method="get">
-        <label for="query" id="querylabel">All</label>
-        <input type="hidden" id="engine" name="engine" value="voldemort" />
-        <input type="text" name="query" id="query" title="" value="" />
-        <input type="image" src="/graphics/search-box/button-search-up.png" alt="Find" class="find" value="Find" />
-</form>
-';
-}
-else if ($query=="metalib"){
-echo '
-<form action="/sitescripts/search-box/searchbox.php" method="get">
-        <label for="query" id="querylabel">ARTICLES</label>
-        <input type="hidden" id="engine" name="engine" value="voldemort" />
-        <input type="text" name="query" id="query" title="" value="" />
-        <input type="image" src="/graphics/search-box/button-search-up.png" alt="Find" class="find" value="Find" />
-	<br />
-        <input type="radio" name="subengine" id="findarticle" value="article" checked="checked" />
-        <label for="findarticle" style="display:inline;">FindArticles</label>
-        <input type="radio" name="subengine" id="googlescholar" value="googlescholar" />
-        <label for="googlescholar" style="display:inline;">Google Scholar</label>
-</form>
-<p class="search-home-links"><a href="http://www.lib.utexas.edu/indexes/">MORE DATABASES</a></p>
-<p class="moredatabases">
-<a href="/indexes/titles.html?let=A">A</a>
-
- <a href="/indexes/titles.html?let=B">B</a>
-
- <a href="/indexes/titles.html?let=C">C</a>
-
- <a href="/indexes/titles.html?let=D">D</a>
-
- <a href="/indexes/titles.html?let=E">E</a>
-
- <a href="/indexes/titles.html?let=F">F</a>
-
- <a href="/indexes/titles.html?let=G">G</a>
-
- <a href="/indexes/titles.html?let=H">H</a>
-
- <a href="/indexes/titles.html?let=I">I</a>
-
- <a href="/indexes/titles.html?let=J">J</a>
-
- <a href="/indexes/titles.html?let=K">K</a>
-
- <a href="/indexes/titles.html?let=L">L</a>
-
- <a href="/indexes/titles.html?let=M">M</a>
-
- <a href="/indexes/titles.html?let=N">N</a>
-
- <a href="/indexes/titles.html?let=O">O</a>
-
- <a href="/indexes/titles.html?let=P">P</a> Q
-
- <a href="/indexes/titles.html?let=R">R</a>
-
- <a href="/indexes/titles.html?let=S">S</a>
-
- <a href="/indexes/titles.html?let=T">T</a>
-
- <a href="/indexes/titles.html?let=U">U</a>
-
- <a href="/indexes/titles.html?let=V">V</a>
-
- <a href="/indexes/titles.html?let=W">W</a> X Y Z
-</p>
+			<div id="searchcontent" class="gradient">
+				<div id="searchtop">
+					<div style="float:left;">
+					<img src="img/logo.png" style="vertical-align: middle" />
+					</div>
+					
+					<div style="margin-top:1em;">
+						<form>
+							<input type="textfield" size="50" name="query" id="query" />
+							<input class="findbutton" type="button" value="find" />
+							<p style="margin-top: 0; float: left;">Find articles in journals and magazines</p>
+							<p style="float: right; margin-top: 0; clear:right; "><a href="#">Advanced Search</a></p>
+							<div style="clear:both;"></div>
+								<div style="float: left; margin: 0 90px;">
+									<p style="display: inline;"><input type="checkbox" name="article_option" value="peer-review" id="peer-review" checked="checked" style="position: relative; top: 2px;" /> Peer-reviewed only</p>
+									<p style="display: inline;"><input type="checkbox" name="article_option" value="full-text" id="full-text" checked="checked" style="position: relative; top: 2px;" /> Full text only </p>
+								</div>
+							<div style="clear:both;"></div>
+						</form>
+					</div>
+				</div>
+				<div id="searchbottom">
+					<ul id="searchbottom-links">
+						<li style="float: left;"><a href="#">scoUT Mobile</a></li>
+						<li style="float: right;"><a href="#">Google Scholar</a></li>
+					</ul>	
+					<div style="clear:both;"></div>
+				</div>
+			</div>
 ';
 }
 else if ($query=="journal"){
@@ -181,6 +144,38 @@ method="get">
 
  <a href="/indexes/titles.html?let=W">W</a> X Y Z
 </p>
+';
+}
+
+else {
+echo '
+			<div id="searchcontent" class="gradient">
+				<div id="searchtop">
+					<div style="float:left;">
+					<img src="img/logo.png" style="vertical-align: middle" />
+					</div>
+					
+					<div style="margin-top:1em;">
+					<form>
+						<input type="textfield" size="50" name="query" id="query">
+						<input class="findbutton" type="button" value="find">
+					
+					</input>
+					<p style="margin-top: 0; float: left;">Find articles, books, media, and more in one search</p>
+					<p style="float: right; margin-top: 0;"><a href="#">Advanced Search</a></p>
+					<div style="clear:both;"></div>
+					</form>
+					</div>
+				</div>
+				<div id="searchbottom">
+					<ul id="searchbottom-links">
+						<li><a href="#">scoUT Mobile</a></li>
+						<li><a href="#">Search Tips</a></li>
+						<li><a href="#">Feedback</a></li>
+					</ul>	
+					<div style="clear:both;"></div>
+				</div>
+			</div>
 ';
 }
 
