@@ -198,6 +198,7 @@ nav li {
 	font-family: 'Verdana';
 	font-size: 12px;
 	margin: 5px;
+	color: black;
 }
 
 .moredatabases a:link, .moredatabases2 a:link, 
@@ -213,11 +214,11 @@ nav li {
 }
 
 .moredatabases2 a:hover {
-	color: rgba(0,0,0, .75);
+	color: rgba(0,0,0,.75);
 }
 
 .moredatabases a:hover {
-	background: rgba(0,0,0, .5);
+	background: rgba(0,0,0,.5);
 }
 
 .text-stroke-white {
