@@ -19,9 +19,9 @@ echo '
 					</div>
 					
 					<div style="margin-top:1em;">
-					<form>
+					<form action="/sitescripts/search-box/searchbox.php" method="get">
 						<input type="textfield" size="50" name="query" id="query">
-						<input class="findbutton" type="button" value="find">
+						<input class="findbutton" type="button" value="Find">
 					
 					</input>
 					<p style="margin-top: 0; float: left;">Find articles, books, media, and more in one search</p>
@@ -52,9 +52,9 @@ echo '
 					</div>
 					
 					<div style="margin-top:1em;">
-						<form>
+						<form action="/sitescripts/search-box/searchbox.php" method="get">
 							<input type="textfield" size="50" name="query" id="query" />
-							<input class="findbutton" type="button" value="find" />
+							<input class="findbutton" type="button" value="Find" />
 							<p style="margin-top: 0; float: left;">Find articles in journals and magazines</p>
 							<p style="float: right; margin-top: 0; clear:right; "><a href="#">Advanced Search</a></p>
 							<div style="clear:both;"></div>
@@ -83,7 +83,7 @@ echo '
 				<div id="searchcontent" class="gradient">
 					<div id="searchtop">
 						<div style="margin-top:1em;">
-							<form>
+							<form action="/sitescripts/search-box/searchbox.php" method="get">
 								<p style="display: inline;">Search Catalog for</p>
 								<input type="textfield" size="25" name="query" id="query">
 								<select name="subengine">
@@ -94,7 +94,7 @@ echo '
 									<option value="isbn-issn">ISBN/ISSN</option>
 									<option value="oclc">OCLC</option>
 								</select>
-								<input class="findbutton" type="button" value="find"></input>
+								<input class="findbutton" type="button" value="Search"></input>
 								<p style="margin-top: 0; margin-left: 10.25em; float: left;">Books, journals, DVDs and more</p>
 								<p style="float: right; margin-top: 0; clear: right;"><a href="#">Advanced Search</a></p>
 								<div style="clear:both;"></div>
@@ -143,12 +143,11 @@ echo '
 				<div id="searchcontent" class="gradient">
 					<div id="searchtop">
 						<div style="margin-top:1em;">
-							<form>
+							<form action="/sitescripts/search-box/searchbox.php" method="get">
 								<input type="textfield" size="65" name="query" id="query">
-								<input class="findbutton" type="button" value="find"></input>
+								<input class="findbutton" type="button" value="Find"></input>
 								<p style="margin-top: 0; float: left; margin-left: 5px;">Find databases by name or subject</p>
-								<p style="float: right; margin-top: 0; clear: right;"><a href="#">Advanced Search</a></p>
-								
+																
 								<p style="margin-top: 0; float: left; margin-left: 5px;">Recommended Databases: <a href="#">Academic Search Complete</a>, <a href="#">JSTOR</a>, <a href="#">PubMed</a></p>
 								<div style="clear:both;"></div>
 							</form>
@@ -158,7 +157,6 @@ echo '
 					<div id="searchbottom">
 						<p class="moredatabases">
 							<a href="/indexes/titles.php?let=0-9">0-9</a>
-							<a href="/indexes/titles.html?let=2">2</a>
 							<a href="/indexes/titles.html?let=A">A</a>
 							<a href="/indexes/titles.html?let=B">B</a>
 							<a href="/indexes/titles.html?let=C">C</a>
@@ -181,6 +179,7 @@ echo '
 							<a href="/indexes/titles.html?let=U">U</a>
 							<a href="/indexes/titles.html?let=V">V</a>
 							<a href="/indexes/titles.html?let=W">W</a>
+							<a href="/indexes/titles.html?let=Z">Z</a>
 						</p>
 						<p class="moredatabases2">
 							<a href="/indexes/titles.php?let=[A-Z]">View all databases</a>
@@ -199,12 +198,12 @@ echo '
 			<div id="searchcontent" class="gradient">
 					<div id="searchtop">
 						<div style="margin-top:1em;">
-							<form>
+							<form action="/sitescripts/search-box/searchbox.php" method="get">
 								<input type="textfield" size="65" name="query" id="query">
-								<input class="findbutton" type="button" value="find"></input>
+								<input class="findbutton" type="button" value="Find"></input>
 								<div style="clear:both;"></div>
-								<input type="radio" name="format" value="digital" checked="yes"><span class="moredatabases">Available Online</span></input>
-								<input type="radio" name="format" value="print"><span class="moredatabases">Available in Print</span></input>							
+								<input type="radio" name="format" value="digital" checked="yes"><span class="moredatabases">Available online</span></input>
+								<input type="radio" name="format" value="print"><span class="moredatabases">Available in print</span></input>							
 								<p class="moredatabases2" style="margin-top: 1em;"><a href="/indexes/citation/">Find article from a citation</a></p>
 								<div style="clear:both;"></div>
 							</form>
@@ -254,9 +253,9 @@ echo '
 			<div id="searchcontent" class="gradient">
 					<div id="searchtop">
 						<div style="margin-top:1em;">
-							<form>
-								<input type="textfield" size="65" name="query" id="query">
-								<input class="findbutton" type="button" value="find"></input>
+							<form action="/sitescripts/search-box/searchbox.php" method="get">
+								<input type="textfield" size="65" name="query" id="query" style="background-image: url(http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif); background-color: rgb(255, 255, 255); background-position: 0% 50%; background-repeat: no-repeat no-repeat;">
+								<input class="findbutton" type="button" value="Search"></input>
 								<div style="clear:both;"></div>
 								<p style="margin-top: 0;margin-left: .5em;">Search our site for things like staff, hours, and computers</p>
 								<div style="clear:both;"></div>
@@ -286,7 +285,7 @@ echo '
 					</div>
 					
 					<div style="margin-top:1em;">
-					<form>
+					<form action="/sitescripts/search-box/searchbox.php" method="get">
 						<input type="textfield" size="50" name="query" id="query">
 						<input class="findbutton" type="button" value="find">
 					
