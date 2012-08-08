@@ -1,25 +1,3 @@
-/*Functions for mouseover Search "Find" button state change*/
-var mouseenter_findButton = function (){
-	$('search-home-content').getElement('.find').set('src', '/graphics/search-box/button-search-down.png');
-}
-var mouseleave_findButton = function (){
-	$('search-home-content').getElement('.find').set('src', '/graphics/search-box/button-search-up.png');
-}
-/*end of functiosn for Search button state change*/
-
-/*function to loop through helper text array*/
- function in_array(string, array)  
- {  
-    for (i = 0; i < array.length; i++)  
-    {  
-       if(array[i] == string)  
-       {  
-          return true;  
-       }  
-    }  
- return false;  
- }  
-
 // When the document loads do everything inside here ...
 $(document).ready(function(){
 
@@ -29,41 +7,27 @@ $(document).ready(function(){
                 return false;
 	});
 	
-	//$('#picture').css("height","210px");
-	//$('#picture').css("visibility","visible");
-
-	/*Set default tab color*/
-	$('#catalog').css("background-image","url(/graphics/search-box/tab-books-more-down.png)");
-	$('#catalog a').css("color","#ffffff");
+	/*function to loop through helper text array*/
+	function in_array(string, array)  {  
+		for (i = 0; i < array.length; i++)	{  
+		   if(array[i] == string)  {  
+			  return true;  
+		   }
+		}
+	return false;  
+	} 
 	
-	/*Call functions for state change of Search "Find" button */
-	$('#search-home-content .find').mouseenter(function() {
-		$('#search-home-content .find').attr('src', '/graphics/search-box/button-search-down.png');
-	});
-	/*Call functions for state change of Search "Find" button */
-	$('#search-home-content .find').mouseleave(function() {
-		$('#search-home-content .find').attr('src', '/graphics/search-box/button-search-up.png');
-	});
- 
 	/*Helper text Array*/
-	var helpertext = ["Search for books and other materials in our library catalog", 
-			"Search for books and other materials at UT and Worldwide", 
-			"Search inside books scanned by Google", 
-			"Search for DVDs in our library catalog",
-			"Search for CDs in our library catalog",
-			"Search for articles in our new search service",
-			"Search for articles using Google Scholar",
-			"Search for journal titles available electronically",
-			"Search for journal titles in our library catalog",
-			"Search the UT Libraries website"];
+	var helpertext = [
+		"",
+		"Google Site Search"
+	];
 
 	/*Default load of helper text*/
 	$('#query').attr("value", helpertext[0]);
 	$('#query').click(function () {
-		if(in_array($(this).attr("value"), helpertext)){
-			$(this).attr("value", ""); 
-		}
-    	});
+		$(this).attr("value", ""); 
+    });
 
 
 	function iiikwformcall(thisurl, usertext) {
@@ -77,15 +41,15 @@ $(document).ready(function(){
 				alert('Error loading form ');
 			},
 			success: function(msg){ 
-				$('#search-home-content').hide(); 
-	   			$('#search-home-content').show(1, function(event, request, settings){
+				$('#bazinga').hide(); 
+	   			$('#bazinga').show(1, function(event, request, settings){
 	   				result=msg;
 	   				$(this).html(result);
 
-					if (thisurl == "/sitescripts/search-box/searchbox-voldemort-form.php?query=catalog"){
+					if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=all"){
 						if (in_array(usertext, helpertext)){
 							$('#query').attr("value", helpertext[0]);
-						}
+						}						
 						else if (usertext == ""){
 							$('#query').attr("value", helpertext[0]);
 						}
@@ -93,280 +57,158 @@ $(document).ready(function(){
 							$('#query').attr("value", usertext);
 						}
 				
-
 						$('#query').click(function() {
-							if(in_array($(this).attr("value"), helpertext)){
-								$(this).attr("value", ""); 
-							}
-	    					});
-						$('#search-catalog').click(function() {
-							if(in_array($('#query').attr("value"), helpertext)){
-								$('#query').attr("value", helpertext[0]);
-							}
-							if($('#query').attr("value")==""){
-								$('#query').attr("value", helpertext[0]);
-							}
-	    					});
-						$('#search-worldcat').click(function() {
-							if(in_array($('#query').attr("value"), helpertext)){
-								$('#query').attr("value", helpertext[1]); 
-							}
-							if($('#query').attr("value")==""){
-								$('#query').attr("value", helpertext[1]);
-							}
-	    					});
-						$('#search-googlebooks').click(function() {
-							if(in_array($('#query').attr("value"), helpertext)){
-								$('#query').attr("value", helpertext[2]); 
-							}
-							if($('#query').attr("value")==""){
-								$('#query').attr("value", helpertext[2]);
-							}
-	    					});
-
-
+							$(this).attr("value", ""); 
+	    				});
 					}
-					if (thisurl == "/sitescripts/search-box/searchbox-voldemort-form.php?query=cdsdvds"){
+					
+					if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=articles"){
 						if (in_array(usertext, helpertext)){
-							$('#query').attr("value", helpertext[3]);
-						}
+							$('#query').attr("value", helpertext[0]);
+						}						
 						else if (usertext == ""){
-							$('#query').attr("value", helpertext[3]);
+							$('#query').attr("value", helpertext[0]);
 						}
 						else {
 							$('#query').attr("value", usertext);
 						}
 
 						$('#query').click(function() {
-							if(in_array($(this).attr("value"), helpertext)){
-								$(this).attr("value", ""); 
-							}
-	    					});
-						$('#search-dvd').click(function() {
-							if(in_array($('#query').attr("value"), helpertext)){ 
-								$('#query').attr("value", helpertext[3]);
-							}
-							if($('#query').attr("value")==""){
-								$('#query').attr("value", helpertext[3]);
-							}
-	    					});
-						$('#search-cd').click(function() {
-							if(in_array($('#query').attr("value"), helpertext)){
-								$('#query').attr("value", helpertext[4]); 
-							}
-							if($('#query').attr("value")==""){
-								$('#query').attr("value", helpertext[4]);
-							}
-	    					});
-
+							$(this).attr("value", ""); 
+	    				});
 					}
-					if (thisurl == "/sitescripts/search-box/searchbox-voldemort-form.php?query=metalib") {
+					
+					if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=catalog"){
 						if (in_array(usertext, helpertext)){
-							$('#query').attr("value", helpertext[5]);
-						}
+							$('#query').attr("value", helpertext[0]);
+						}						
 						else if (usertext == ""){
-							$('#query').attr("value", helpertext[3]);
+							$('#query').attr("value", helpertext[0]);
 						}
 						else {
 							$('#query').attr("value", usertext);
 						}
 
 						$('#query').click(function() {
-							if(in_array($(this).attr("value"), helpertext)){
-								$(this).attr("value", ""); 
-							}
-	    					});
-						$('#findarticle').click(function() {
-							if(in_array($('#query').attr("value"), helpertext)){ 
-								$('#query').attr("value", helpertext[5]);
-							}
-							if($('#query').attr("value")==""){
-								$('#query').attr("value", helpertext[5]);
-							}
-	    					});
-						$('#googlescholar').click(function() {
-							if(in_array($('#query').attr("value"), helpertext)){
-								$('#query').attr("value", helpertext[6]); 
-							}
-							if($('#query').attr("value")==""){
-								$('#query').attr("value", helpertext[6]);
-							}
-	    					});
-
+							$(this).attr("value", ""); 
+	    				});
 					}
-
-					if (thisurl == "/sitescripts/search-box/searchbox-voldemort-form.php?query=ejournal") {
+					
+					if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=databases"){
 						if (in_array(usertext, helpertext)){
-							$('#query').attr("value", helpertext[7]);
-						}
+							$('#query').attr("value", helpertext[0]);
+						}						
 						else if (usertext == ""){
-							$('#query').attr("value", helpertext[7]);
+							$('#query').attr("value", helpertext[0]);
 						}
 						else {
 							$('#query').attr("value", usertext);
 						}
 
 						$('#query').click(function() {
-							if(in_array($(this).attr("value"), helpertext)){
-								$(this).attr("value", ""); 
-							}
-	    					});
-						$('#electjournal').click(function() {
-							if(in_array($('#query').attr("value"), helpertext)){
-								$('#query').attr("value", helpertext[7]);
-							}
-							if($('#query').attr("value")==""){
-								$('#query').attr("value", helpertext[7]);
-							}
-	    					});
-						$('#printjournal').click(function() {
-							if(in_array($('#query').attr("value"), helpertext)){
-								$('#query').attr("value", helpertext[8]); 
-							}
-							if($('#query').attr("value")==""){
-								$('#query').attr("value", helpertext[8]);
-							}
-	    					});
-
+							$(this).attr("value", ""); 
+	    				});
 					}
-					if (thisurl == "/sitescripts/search-box/searchbox-voldemort-form.php?query=site") {
+					
+					if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=journals"){
 						if (in_array(usertext, helpertext)){
-							$('#query').attr("value", helpertext[9]);
-						}
+							$('#query').attr("value", helpertext[0]);
+						}						
 						else if (usertext == ""){
-							$('#query').attr("value", helpertext[9]);
+							$('#query').attr("value", helpertext[0]);
 						}
-						else {$('#query').attr("value", usertext);}
-
+						else {
+							$('#query').attr("value", usertext);
+						}
 
 						$('#query').click(function() {
-							if(in_array($(this).attr("value"), helpertext)){
-								$(this).attr("value", ""); 
-							}
-	    					});
-						
+							$(this).attr("value", ""); 
+	    				});
 					}
+					
+					if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=site"){
+						if (in_array(usertext, helpertext)){
+							$('#query').attr("value", helpertext[1]);
+						}						
+						else if (usertext == ""){
+							$('#query').attr("value", helpertext[1]);
+						}
+						else {
+							$('#query').attr("value", usertext);
+						}
 
-					/*Call functions for state change of Search "Find" button */
-						$('#search-home-content .find').mouseenter(function() {
-							$('#search-home-content .find').attr('src', '/graphics/search-box/button-search-down.png');
-						});
-						/*Call functions for state change of Search "Find" button */
-						$('#search-home-content .find').mouseleave(function() {
-							$('#search-home-content .find').attr('src', '/graphics/search-box/button-search-up.png');
-						});
+						$('#query').click(function() {
+							$(this).attr("value", ""); 
+	    				});
+					}
 					
 	   			});//end ajaxComplete
 	  		}//end success
            		
  		});//ajax
 	}
-
-
-	$('#iiikw').attr('href', '/sitescripts/search-box/searchbox-voldemort-form.php?query=catalog');
-	$('#iiikw').click(function() {
-		$('#search-home-content').animate({opacity:0}, 10);
-		$('#site').css("background-image", "url(/graphics/search-box/tab-search-site-up.png)");
-		$('#site a').css("color", "#000000");
-		$('#catalog').css("background-image", "url(/graphics/search-box/tab-books-more-down.png)");
-		$('#catalog a').css("color", "#ffffff");
-		$('#cddvd').css("background-image", "url(/graphics/search-box/tab-cds-dvds-up.png)");
-		$('#cddvd a').css("color", "#000000");
-		$('#article').css("background-image", "url(/graphics/search-box/tab-articles-up.png)");
-		$('#article a').css("color", "#000000");
-		$('#journal').css("background-image", "url(/graphics/search-box/tab-journals-up.png)");
-		$('#journal a').css("color", "#000000");
-		var usertext = $('#query').attr("value");
-		var thisurl = $(this).attr("href");
-		iiikwformcall(thisurl,usertext);
-		$('#search-home-content').fadeTo("slow", 1);
-		return false;
-	});
-
-	$('#cdsdvds').attr('href', '/sitescripts/search-box/searchbox-voldemort-form.php?query=cdsdvds');
-	$('#cdsdvds').click( function() {
-		$('#search-home-content').animate({opacity:0}, 10);
-		$('#site').css("background-image", "url(/graphics/search-box/tab-search-site-up.png)");
-		$('#site a').css("color", "#000000");
-		$('#catalog').css("background-image", "url(/graphics/search-box/tab-books-more-up.png)");
-		$('#catalog a').css("color", "#000000");
-		$('#cddvd').css("background-image", "url(/graphics/search-box/tab-cds-dvds-down.png)");
-		$('#cddvd a').css("color", "#ffffff");
-		$('#article').css("background-image", "url(/graphics/search-box/tab-articles-up.png)");
-		$('#article a').css("color", "#000000");
-		$('#journal').css("background-image", "url(/graphics/search-box/tab-journals-up.png)");
-		$('#journal a').css("color", "#000000");
-		var usertext = $('#query').attr("value");
-		var thisurl = $(this).attr("href");
-		iiikwformcall(thisurl,usertext);
-		$('#search-home-content').fadeTo("slow", 1);
-		return false;
+	
+	$('#searchtabs li').click(function() {
+		var parent = $(this);
 		
-	});
-
-	$('#metalib').attr('href', '/sitescripts/search-box/searchbox-voldemort-form.php?query=metalib');
-	$('#metalib').click( function() {
-		$('#search-home-content').animate({opacity:0}, 10);
-		$('#site').css("background-image", "url(/graphics/search-box/tab-search-site-up.png)");
-		$('#site a').css("color", "#000000");
-		$('#catalog').css("background-image", "url(/graphics/search-box/tab-books-more-up.png)");
-		$('#catalog a').css("color", "#000000");
-		$('#cddvd').css("background-image", "url(/graphics/search-box/tab-cds-dvds-up.png)");
-		$('#cddvd a').css("color", "#000000");
-		$('#article').css("background-image", "url(/graphics/search-box/tab-articles-down.png)");
-		$('#article a').css("color", "#ffffff");
-		$('#journal').css("background-image", "url(/graphics/search-box/tab-journals-up.png)");
-		$('#journal a').css("color", "#000000");
-		var usertext = $('#query').attr("value");
-		var thisurl = $(this).attr("href");
-		iiikwformcall(thisurl,usertext);
-		$('#search-home-content').fadeTo("slow", 1);
-		return false;
-		
-	});
-
-	$('#ejournal').attr('href', '/sitescripts/search-box/searchbox-voldemort-form.php?query=ejournal');
-	$('#ejournal').click( function() {
-		$('#search-home-content').animate({opacity:0}, 10);
-		$('#site').css("background-image", "url(/graphics/search-box/tab-search-site-up.png)");
-		$('#site a').css("color", "#000000");
-		$('#catalog').css("background-image", "url(/graphics/search-box/tab-books-more-up.png)");
-		$('#catalog a').css("color", "#000000");
-		$('#cddvd').css("background-image", "url(/graphics/search-box/tab-cds-dvds-up.png)");
-		$('#cddvd a').css("color", "#000000");
-		$('#article').css("background-image", "url(/graphics/search-box/tab-articles-up.png)");
-		$('#article a').css("color", "#000000");
-		$('#journal').css("background-image", "url(/graphics/search-box/tab-journals-down.png)");
-		$('#journal a').css("color", "#ffffff");
-		var usertext = $('#query').attr("value");
-		var thisurl = $(this).attr("href");
-		iiikwformcall(thisurl,usertext);
-		$('#search-home-content').fadeTo("slow", 1);
-		return false;
-		
-	});
-
-	$('#utlol').attr('href', '/sitescripts/search-box/searchbox-voldemort-form.php?query=site');
-	$('#utlol').click( function() {
-		$('#search-home-content').animate({opacity:0}, 10);
-		$('#site').css("background-image", "url(/graphics/search-box/tab-search-site-down.png)");
-		$('#site a').css("color", "#ffffff");
-		$('#catalog').css("background-image", "url(/graphics/search-box/tab-books-more-up.png)");
-		$('#catalog a').css("color", "#000000");
-		$('#cddvd').css("background-image", "url(/graphics/search-box/tab-cds-dvds-up.png)");
-		$('#cddvd a').css("color", "#000000");
-		$('#article').css("background-image", "url(/graphics/search-box/tab-articles-up.png)");
-		$('#article a').css("color", "#000000");
-		$('#journal').css("background-image", "url(/graphics/search-box/tab-journals-up.png)");
-		$('#journal a').css("color", "#000000");
-		var usertext = $('#query').attr("value");
-		var thisurl = $(this).attr("href");
-		iiikwformcall(thisurl,usertext);
-		$('#search-home-content').fadeTo("slow", 1);
-		return false;
-		
+		if (!parent.hasClass('active')) {
+			parent.addClass('active').siblings().removeClass('active');
+		}
 	});
 	
+	$('#all').attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=all');
+	$('#all').click(function() {
+		var usertext = $('#query').attr("value");
+		var thisurl = $(this).attr("href");
+		iiikwformcall(thisurl,usertext);
+		$('#bazinga').fadeTo("slow", 1);
+		return false;
+	});
+
+	$('#articles').attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=articles');
+	$('#articles').click( function() {
+		var usertext = $('#query').attr("value");
+		var thisurl = $(this).attr("href");
+		iiikwformcall(thisurl,usertext);
+		$('#bazinga').fadeTo("slow", 1);
+		return false;
+	});
+	
+	$('#catalog').attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=catalog');
+	$('#catalog').click( function() {		
+		var usertext = $('#query').attr("value");
+		var thisurl = $(this).attr("href");
+		iiikwformcall(thisurl,usertext);
+		$('#bazinga').fadeTo("slow", 1);
+		return false;
+	});
+	
+	$('#databases').attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=databases');
+	$('#databases').click( function() {		
+		var usertext = $('#query').attr("value");
+		var thisurl = $(this).attr("href");
+		iiikwformcall(thisurl,usertext);
+		$('#bazinga').fadeTo("slow", 1);
+		return false;
+	});
+	
+	$('#journals').attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=journals');
+	$('#journals').click( function() {		
+		var usertext = $('#query').attr("value");
+		var thisurl = $(this).attr("href");
+		iiikwformcall(thisurl,usertext);
+		$('#bazinga').fadeTo("slow", 1);
+		return false;
+	});
+	
+	$('#site').attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=site');
+	$('#site').click( function() {		
+		var usertext = $('#query').attr("value");
+		var thisurl = $(this).attr("href");
+		iiikwformcall(thisurl,usertext);
+		$('#bazinga').fadeTo("slow", 1);
+		return false;
+	});
 
 }); //close $(document)
 
