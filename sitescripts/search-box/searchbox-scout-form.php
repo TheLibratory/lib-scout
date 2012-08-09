@@ -91,12 +91,11 @@ echo '
 							<input type="hidden" id="engine" name="engine" value="catalog" />
 								<p style="display: inline;">Search Catalog for</p>
 								<input type="textfield" size="23" name="query" id="query">
-								<select name="subengine">
-									<option value="key-phrase">keyword or phrase</option>
+								<select name="parameter">
+									<option value="key">keyword or phrase</option>
 									<option value="author">author</option>
 									<option value="title">title</option>
-									<option value="journal">journal title</option>
-									<option value="isbn-issn">ISBN/ISSN</option>
+									<option value="isbn">ISBN/ISSN</option>
 									<option value="oclc">OCLC</option>
 								</select>
 								<input class="findbutton" type="submit" value="Search"></input>
@@ -106,24 +105,24 @@ echo '
 								<table width="100%">
 									<tr>
 										<td>
-											<input type="checkbox" name="format" value="any" class="checkbox" checked="yes">Any format</input>
+											<input type="radio" name="subengine" value="any" class="checkbox" checked="yes">Any format</input>
 										</td>
 										<td>
-											<input type="checkbox" name="format" value="book" class="checkbox">Books, eBooks</input>
+											<input type="radio" name="subengine" value="books" class="checkbox">Books, eBooks</input>
 										</td>
 										<td>
-											<input type="checkbox" name="format" value="smallprint" class="checkbox">Journals, newspapers, magazines</input>
+											<input type="radio" name="subengine" value="articles" class="checkbox">Journals, newspapers, magazines</input>
 										</td>
 									</tr>
 									<tr>
 										<td>
-											<input type="checkbox" name="format" value="dvd" class="checkbox">DVDs</input>
+											<input type="radio" name="subengine" value="dvd" class="checkbox">DVDs</input>
 										</td>
 										<td>
-											<input type="checkbox" name="format" value="cd" class="checkbox">CDs</input>
+											<input type="radio" name="subengine" value="cd" class="checkbox">CDs</input>
 										</td>
 										<td>
-											<input type="checkbox" name="format" value="map" class="checkbox">Maps</input>
+											<input type="radio" name="subengine" value="map" class="checkbox">Maps</input>
 										</td>
 								</table>
 							</form>
