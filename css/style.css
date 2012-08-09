@@ -1,5 +1,3 @@
-/* 3:17pm */
-
 @font-face {
     font-family: 'CuprumFFURegular';
     src: url('../fonts/cuprum-webfont.eot');
@@ -44,6 +42,12 @@ p {
 a {
 	text-decoration: none;
 	border: none;
+}
+
+fieldset {
+	border:0;
+	margin:0;
+	padding:0;
 }
 
 #searchtabs a:visited, #searchtabs a {
