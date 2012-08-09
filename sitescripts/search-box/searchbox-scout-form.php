@@ -15,7 +15,7 @@ echo '
 			<div id="searchcontent" class="gradient">
 				<div id="searchtop">
 					<div style="float:left;">
-					<img src="img/logo.png" style="vertical-align: middle" />
+					<img src="/sitescripts/search-box-scout/logo2.png" style="vertical-align: middle" />
 					</div>
 					
 					<div style="margin-top:1em;">
@@ -49,7 +49,7 @@ echo '
 			<div id="searchcontent" class="gradient">
 				<div id="searchtop">
 					<div style="float:left;">
-					<img src="img/logo.png" style="vertical-align: middle" />
+					<img src="/sitescripts/search-box-scout/logo2.png" style="vertical-align: middle" />
 					</div>
 					
 					<div style="margin-top:1em;">
@@ -61,9 +61,9 @@ echo '
 							<p style="margin-top: 0; float: left;">Find articles in journals and magazines</p>
 							<p style="float: right; margin-top: 0; clear:right; "><a href="#">Advanced Search</a></p>
 							<div style="clear:both;"></div>
-								<div style="float: left; margin: 0 90px;">
-									<p style="display: inline;"><input type="checkbox" name="article_option[]" value="1" id="peer-review" checked="checked" style="position: relative; top: 2px;" /> Peer-reviewed only</p>
-									<p style="display: inline;"><input type="checkbox" name="article_option[]" value="2" id="full-text" checked="checked" style="position: relative; top: 2px;" /> Full text only </p>
+								<div style="float: left; margin: 0">
+									<p style="display: inline;"><input type="checkbox" name="article_option[]" value="1" id="peer-review" checked="checked" style="position: relative; top: 2px;" /><label for="peer-review"> Peer-reviewed only</label></p>
+									<p style="display: inline;"><input type="checkbox" name="article_option[]" value="2" id="full-text" checked="checked" style="position: relative; top: 2px;" /><label for="full-text"> Full text only</label></p>
 								</div>
 							<div style="clear:both;"></div>
 						</fieldset>
@@ -105,24 +105,24 @@ echo '
 								<table width="100%">
 									<tr>
 										<td>
-											<input type="radio" name="subengine" value="any" class="checkbox" checked="yes">Any format</input>
+											<input type="radio" name="subengine" value="any" class="checkbox" checked="yes" id="any" /><label for="any">Any format</label>
 										</td>
 										<td>
-											<input type="radio" name="subengine" value="books" class="checkbox">Books, eBooks</input>
+											<input type="radio" name="subengine" value="books" class="checkbox" id="books" /><label for="books">Books, eBooks</label>
 										</td>
 										<td>
-											<input type="radio" name="subengine" value="articles" class="checkbox">Journals, newspapers, magazines</input>
+											<input type="radio" name="subengine" value="articles" class="checkbox" id="article" /><label for="article">Journals, newspapers, magazines</label>
 										</td>
 									</tr>
 									<tr>
 										<td>
-											<input type="radio" name="subengine" value="dvd" class="checkbox">DVDs</input>
+											<input type="radio" name="subengine" value="dvd" class="checkbox" id="dvd" /><label for="dvd">DVDs</label>
 										</td>
 										<td>
-											<input type="radio" name="subengine" value="cd" class="checkbox">CDs</input>
+											<input type="radio" name="subengine" value="cd" class="checkbox" id="cd" /><label for="cd">CDs</label>
 										</td>
 										<td>
-											<input type="radio" name="subengine" value="map" class="checkbox">Maps</input>
+											<input type="radio" name="subengine" value="map" class="checkbox" id="map" /><label for="map">Maps</label>
 										</td>
 								</table>
 							</form>
@@ -208,8 +208,8 @@ echo '
 								<input type="textfield" size="65" name="query" id="query">
 								<input class="findbutton" type="submit" value="Find"></input>
 								<div style="clear:both;"></div>
-								<input type="radio" name="subengine" value="ejournal" checked="yes"><span class="moredatabases">Available online</span></input>
-								<input type="radio" name="subengine" value="pjournal"><span class="moredatabases">Available in print</span></input>							
+								<input type="radio" name="subengine" value="ejournal" checked="yes" id="ejournal" /><span class="moredatabases"><label for="ejournal">Available online</label></span>
+								<input type="radio" name="subengine" value="pjournal" id="pjournal" /><span class="moredatabases"><label for="pjournal">Available in print</label></span>
 								<p class="moredatabases2" style="margin-top: 1em;"><a href="/indexes/citation/">Find article from a citation</a></p>
 								<div style="clear:both;"></div>
 							</form>
@@ -288,7 +288,7 @@ echo '
 			<div id="searchcontent" class="gradient">
 				<div id="searchtop">
 					<div style="float:left;">
-					<img src="img/logo.png" style="vertical-align: middle" />
+					<img src="/sitescripts/search-box-scout/logo2.png" style="vertical-align: middle" />
 					</div>
 					
 					<div style="margin-top:1em;">
