@@ -2,6 +2,7 @@
 if (isset($_GET['engine'])){$engine = $_GET['engine'];}
 if (isset($_GET['subengine'])){$subengine = $_GET['subengine'];}
 if (isset($_GET['query'])){$query = $_GET['query'];}
+if (isset($_GET['parameter'])){$parameter = $_GET['parameter'];}
 if (isset($_GET['article_option'])){$artoption = $_GET['article_option'];}
 
 //includes libiprange to check library ips
@@ -48,18 +49,34 @@ if (isset($_GET['engine'])){ //Determine search URL based on input (engine, sube
 		}
 	}
 	else if ($engine=="catalog") {
-		//Do nothing yet
+		$baseurl = 'http://catalog.lib.utexas.edu/search/';
+		$param_array = array(
+			'key' => 'X?SEARCH=',
+			'author' => 'a?SEARCH=',
+			'title' => 't?SEARCH=',
+			'isbn' => 'i?SEARCH=',
+			'oclc' => 'o?SEARCH=',
+		);
+		$sub_array = array(
+			'any' => '',
+			'books' => '&m=a&m=z',
+			'articles' => '&searchscope=5',
+			'dvd' => '&searchscope=3',
+			'cd' => '&searchscope=1',
+			'map' => '&m=e&m=f',
+		);
+		// if ($paramater=="journal") {header('Location: ' . $baseurl . $param_array[$parameter] . urlencode($query) . $sub_array['articles']);}
+		header('Location: ' . $baseurl . $param_array[$parameter] . urlencode($query) . $sub_array[$subengine]);
 	}
-	else if ($engine=="databases") {
-		header('Location: http://www.lib.utexas.edu/search/search.php?filter=1&query=Databases+' . urlencode($query) . '');
-	}
+	
+	else if ($engine=="databases") {header('Location: http://www.lib.utexas.edu/search/search.php?filter=1&query=Databases+' . urlencode($query) . '');}
+	
 	else if ($engine=="journals") {
 		if ($subengine=="ejournal"){header('Location: http://findit.lib.utexas.edu/utaustin/az?param_perform_value=searchTitle&param_type_value=textSearch&param_chinese_checkbox_active=1&param_pattern_value='. urlencode($query) .'');}
 		else if($subengine=="pjournal"){header('Location: http://catalog.lib.utexas.edu/search/t?SEARCH='. urlencode($query) .'&searchscope=5');}
 	}
-	else if ($engine=="site") {
-		header('Location: http://www.lib.utexas.edu/search/search.php?filter=1&query='. urlencode($query) .'');
-	}
+	
+	else if ($engine=="site") {header('Location: http://www.lib.utexas.edu/search/search.php?filter=1&query='. urlencode($query) .'');}
 	else {header('Location: /');}	
 }
 
