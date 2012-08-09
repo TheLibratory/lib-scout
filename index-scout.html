@@ -3,7 +3,7 @@
 <?phpinclude('sitescripts/rotator.php');	$file = $REQUEST_URI;	if ( substr($file, -1) == '/' ) {		$file .= "index.html";	}	$uri = apache_lookup_uri($file);	$file = $uri->filename;$there = file_exists($file);if ($there) {	$modtime = filemtime($file);	$lastmod = date("F j, Y", $modtime);} else {	$lastmod = "March 1, 2003";}?>
 <?php$randomdir1 = 'images/homeimagescout/';include('sitescripts/spotlight1.php');?><style type="text/css">#search-main {	background-image:  url("<?php echo ($randpath1); ?>");	}</style>
 <link rel="alternate" type="application/rss+xml" title="University of Texas Libraries News" href="utlol.rss" /><link rel="alternate" type="application/rss+xml" title="University of Texas Libraries Events" href="/calendar/rss" /><link rel="apple-touch-icon" href="http://www.lib.utexas.edu/images/customIcon.png"/>
-<!-- Scout search box --><link rel="stylesheet" href="css/style.css" type="text/css">	<!--[if gte IE 9]>	  <style type="text/css">	    .gradient {	       filter: none;	    }	  </style>	<![endif]--><!-- home style sheet --><link rel="stylesheet" href="home.css" type="text/css">
+<!-- Scout search box --><link rel="stylesheet" href="sitescripts/search-box-scout/style.css" type="text/css">	<!--[if gte IE 9]>	  <style type="text/css">	    .gradient {	       filter: none;	    }	  </style>	<![endif]--><!-- home style sheet --><link rel="stylesheet" href="home.css" type="text/css">
 <?php 
 if (isset($_GET['showmenu'])){
 	$site = $_GET['showmenu'];
