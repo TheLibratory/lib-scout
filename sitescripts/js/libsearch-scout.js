@@ -18,10 +18,7 @@ $(document).ready(function(){
 	} 
 	
 	/*Helper text Array*/
-	var helpertext = [
-		"",
-		"Google Site Search"
-	];
+	var helpertext = [""];
 
 	/*Default load of helper text*/
 	$('#query').attr("value", helpertext[0]);
@@ -128,10 +125,10 @@ $(document).ready(function(){
 					
 					if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=site"){
 						if (in_array(usertext, helpertext)){
-							$('#query').attr("value", helpertext[1]);
+							$('#query').attr("value", helpertext[0]);
 						}						
 						else if (usertext == ""){
-							$('#query').attr("value", helpertext[1]);
+							$('#query').attr("value", helpertext[0]);
 						}
 						else {
 							$('#query').attr("value", usertext);
@@ -158,6 +155,7 @@ $(document).ready(function(){
 	
 	$('#all').attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=all');
 	$('#all').click(function() {
+		$('#bazinga').animate({opacity:0}, 10);	
 		var usertext = $('#query').attr("value");
 		var thisurl = $(this).attr("href");
 		iiikwformcall(thisurl,usertext);
@@ -167,6 +165,7 @@ $(document).ready(function(){
 
 	$('#articles').attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=articles');
 	$('#articles').click( function() {
+		$('#bazinga').animate({opacity:0}, 10);	
 		var usertext = $('#query').attr("value");
 		var thisurl = $(this).attr("href");
 		iiikwformcall(thisurl,usertext);
@@ -176,6 +175,7 @@ $(document).ready(function(){
 	
 	$('#catalog').attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=catalog');
 	$('#catalog').click( function() {		
+		$('#bazinga').animate({opacity:0}, 10);	
 		var usertext = $('#query').attr("value");
 		var thisurl = $(this).attr("href");
 		iiikwformcall(thisurl,usertext);
@@ -184,7 +184,8 @@ $(document).ready(function(){
 	});
 	
 	$('#databases').attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=databases');
-	$('#databases').click( function() {		
+	$('#databases').click( function() {
+		$('#bazinga').animate({opacity:0}, 10);	
 		var usertext = $('#query').attr("value");
 		var thisurl = $(this).attr("href");
 		iiikwformcall(thisurl,usertext);
@@ -194,6 +195,7 @@ $(document).ready(function(){
 	
 	$('#journals').attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=journals');
 	$('#journals').click( function() {		
+		$('#bazinga').animate({opacity:0}, 10);	
 		var usertext = $('#query').attr("value");
 		var thisurl = $(this).attr("href");
 		iiikwformcall(thisurl,usertext);
@@ -202,7 +204,8 @@ $(document).ready(function(){
 	});
 	
 	$('#site').attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=site');
-	$('#site').click( function() {		
+	$('#site').click( function() {
+		$('#bazinga').animate({opacity:0}, 10);	
 		var usertext = $('#query').attr("value");
 		var thisurl = $(this).attr("href");
 		iiikwformcall(thisurl,usertext);

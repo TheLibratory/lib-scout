@@ -19,7 +19,6 @@
 						$searchtype = $_GET[searchtype];
 						include('sitescripts/search-box-scout/searchbox-scout-form.php');
 					}
-
 					else { 
 						$searchtype = "all";
 						include('sitescripts/search-box-scout/searchbox-scout-form.php');
