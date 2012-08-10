@@ -116,7 +116,8 @@ nav li {
 	margin: .5em;
 }
 
-#searchtabs li.active {
+#searchtabs li.active,
+#searchtabs li.active:hover {
 	background: #8bc8c6;
 }
 
