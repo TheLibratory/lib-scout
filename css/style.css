@@ -125,6 +125,10 @@ nav li {
 	background: #397977;
 }
 
+#searchtabs li a {
+	text-decoration: none;
+}
+
 #searchtabs li:hover {
 	background: #52adaa;
 	-webkit-transition: all 0.2s ease;
