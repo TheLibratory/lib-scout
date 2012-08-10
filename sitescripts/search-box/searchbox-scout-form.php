@@ -15,7 +15,7 @@ echo '
 			<div id="searchcontent" class="gradient">
 				<div id="searchtop">
 					<div style="float:left;">
-					<img src="/sitescripts/search-box-scout/logo2.png" style="vertical-align: middle" />
+					<img src="/images/scout/logo2.png" style="vertical-align: middle" />
 					</div>
 					
 					<div style="margin-top:1em;">
@@ -24,8 +24,7 @@ echo '
 						<input type="hidden" id="engine" name="engine" value="all" />
 						<input type="textfield" size="50" name="query" id="query">
 						<input type="submit" class="findbutton" value="Find"></input>
-						<p style="margin-top: 0; float: left;">Find articles, books, media, and more in one search</p>
-						<p style="float: right; margin-top: 0; clear: right;"><a href="http://utexas.summon.serialssolutions.com/advanced">Advanced Search</a></p>
+						<p>Find articles, books, media, and more in one search</p>
 						<div style="clear:both;"></div>
 					</fieldset>
 					</form>
@@ -33,7 +32,8 @@ echo '
 				</div>
 				<div id="searchbottom">
 					<ul id="searchbottom-links">
-						<li><a href="http://utexas.summon.serialssolutions.com/">scoUT Mobile</a></li>
+						<li><a href="http://utexas.summon.serialssolutions.com/search/mobile">scoUT Mobile</a></li>
+						<li><a href="http://utexas.summon.serialssolutions.com/advanced">Advanced Search</a></li>
 						<li><a href="#">Search Tips</a></li>
 						<li><a href="#">Feedback</a></li>
 					</ul>	
@@ -49,7 +49,7 @@ echo '
 			<div id="searchcontent" class="gradient">
 				<div id="searchtop">
 					<div style="float:left;">
-					<img src="/sitescripts/search-box-scout/logo2.png" style="vertical-align: middle" />
+					<img src="/images/scout/logo2.png" style="vertical-align: middle" />
 					</div>
 					
 					<div style="margin-top:1em;">
@@ -58,8 +58,7 @@ echo '
 						<input type="hidden" id="engine" name="engine" value="articles" />
 							<input type="textfield" size="50" name="query" id="query" />
 							<input class="findbutton" type="submit" value="Find" />
-							<p style="margin-top: 0; float: left;">Find articles in journals and magazines</p>
-							<p style="float: right; margin-top: 0; clear:right; "><a href="#">Advanced Search</a></p>
+							<p>Find articles in journals and magazines</p>
 							<div style="clear:both;"></div>
 								<div style="float: left; margin: 0">
 									<p style="display: inline;"><input type="checkbox" name="article_option[]" value="1" id="peer-review" checked="checked" style="position: relative; top: 2px;" /><label for="peer-review"> Peer-reviewed only</label></p>
@@ -72,7 +71,8 @@ echo '
 				</div>
 				<div id="searchbottom">
 					<ul id="searchbottom-links">
-						<li style="float: left;"><a href="http://utexas.summon.serialssolutions.com/">scoUT Mobile</a></li>
+						<li style="float: left;"><a href="http://utexas.summon.serialssolutions.com/search/mobile">scoUT Mobile</a></li>
+						<li><a href="http://utexas.summon.serialssolutions.com/advanced">Advanced Search</a></li>
 						<li style="float: right;"><a href="http://scholar.google.com/">Google Scholar</a></li>
 					</ul>	
 					<div style="clear:both;"></div>
@@ -88,8 +88,9 @@ echo '
 					<div id="searchtop">
 						<div style="margin-top:1em;">
 							<form action="/sitescripts/search-box-scout/searchbox-scout.php" method="get">
+							<fieldset>
 							<input type="hidden" id="engine" name="engine" value="catalog" />
-								<p style="display: inline;">Search Catalog for</p>
+								<p style="display: inline;">Search <a href="http://catalog.lib.utexas.edu/">Catalog</a> for</p>
 								<input type="textfield" size="23" name="query" id="query">
 								<select name="parameter">
 									<option value="key">keyword or phrase</option>
@@ -99,8 +100,7 @@ echo '
 									<option value="oclc">OCLC</option>
 								</select>
 								<input class="findbutton" type="submit" value="Search"></input>
-								<p style="margin-top: 0; margin-left: 10.25em; float: left;">Books, journals, DVDs and more</p>
-								<p style="float: right; margin-top: 0; clear: right;"><a href="#">Advanced Search</a></p>
+								<p style="margin-left: 10.25em">Books, journals, DVDs and more</p>
 								<div style="clear:both;"></div>
 								<table width="100%">
 									<tr>
@@ -125,15 +125,14 @@ echo '
 											<input type="radio" name="subengine" value="map" class="checkbox" id="map" /><label for="map">Maps</label>
 										</td>
 								</table>
+							</fieldset>
 							</form>
 						</div>
 					</div>
 					
 					<div id="searchbottom">
 						<ul id="searchbottom-links">
-							<li><a href="#">scoUT Mobile</a></li>
-							<li><a href="#">Search Tips</a></li>
-							<li><a href="#">Feedback</a></li>
+							<li><a href="http://catalog.lib.utexas.edu/search/X">Advanced Catalog Search</a></li>
 						</ul>	
 						<div style="clear:both;"></div>
 					</div>
@@ -148,13 +147,14 @@ echo '
 					<div id="searchtop">
 						<div style="margin-top:1em;">
 							<form action="/sitescripts/search-box-scout/searchbox-scout.php" method="get">
+							<fieldset>
 							<input type="hidden" id="engine" name="engine" value="databases" />
 								<input type="textfield" size="65" name="query" id="query">
 								<input class="findbutton" type="submit" value="Find"></input>
-								<p style="margin-top: 0; float: left; margin-left: 5px;">Find databases by name or subject</p>
-																
-								<p style="margin-top: 0; float: left; margin-left: 5px;">Recommended Databases: <a href="#">Academic Search Complete</a>, <a href="#">JSTOR</a>, <a href="#">PubMed</a></p>
+								<p style="margin-left: .5em;">Find databases by name or subject</p>
+								<p style="margin-top: 0; float: left; margin-left: .5em;">Popular Databases: <a href="/indexes/titles.php?id=6">Academic Search Complete</a>, <a href="/indexes/titles.php?id=214">JSTOR</a>, <a href="/indexes/titles.php?id=299">PubMed</a></p>
 								<div style="clear:both;"></div>
+							</fieldset>
 							</form>
 						</div>
 					</div>
@@ -186,11 +186,11 @@ echo '
 							<a href="/indexes/titles.html?let=W">W</a>
 							<a href="/indexes/titles.html?let=Z">Z</a>
 						</p>
-						<p class="moredatabases2">
-							<a href="/indexes/titles.php?let=[A-Z]">View all databases</a>
-							<a href="/indexes/subjectpopup.php">Browse by subject</a>
-							<a href="/indexes/typepopup.php">Browse by type</a>
-						</p>
+						<ul id="searchbottom-links">
+								<li><a href="/indexes/titles.php?let=[A-Z]">View all databases</a></li>
+								<li><a href="/indexes/subjectpopup.php">Browse by subject</a></li>
+								<li><a href="/indexes/typepopup.php">Browse by type</a></li>
+						</ul>
 						<div style="clear:both;"></div>
 					</div>
 				</div>
@@ -204,20 +204,22 @@ echo '
 					<div id="searchtop">
 						<div style="margin-top:1em;">
 							<form action="/sitescripts/search-box-scout/searchbox-scout.php" method="get">
+							<fieldset>
 							<input type="hidden" id="engine" name="engine" value="journals" />
 								<input type="textfield" size="65" name="query" id="query">
 								<input class="findbutton" type="submit" value="Find"></input>
 								<div style="clear:both;"></div>
-								<input type="radio" name="subengine" value="ejournal" checked="yes" id="ejournal" /><span class="moredatabases"><label for="ejournal">Available online</label></span>
-								<input type="radio" name="subengine" value="pjournal" id="pjournal" /><span class="moredatabases"><label for="pjournal">Available in print</label></span>
-								<p class="moredatabases2" style="margin-top: 1em;"><a href="/indexes/citation/">Find article from a citation</a></p>
+								<input type="radio" name="subengine" value="ejournal" checked="yes" id="ejournal" /><span><label for="ejournal">Available online</label></span>
+								<input type="radio" name="subengine" value="pjournal" id="pjournal" /><span><label for="pjournal">Available in print</label></span>
+								<p style="margin-top: 1em;"><a href="/indexes/citation/">Find article from a citation</a></p>
 								<div style="clear:both;"></div>
+							</fieldset>
 							</form>
 						</div>
 					</div>
 					
 					<div id="searchbottom">
-						<p class="moredatabases2">Browse online Journals by title</p>
+						<p class="moredatabases">Browse online Journals by title</p>
 						<p class="moredatabases">
 							<a href="http://findit.lib.utexas.edu/utaustin/az?&param_sid_save=239076df43b3099044faa5e68d3650de&param_category_search_type_save=browseCategory&param_chinese_checkbox_type_save=Pinyin&param_lang_save=eng&param_letter_group_save=&param_perform_save=searchTitle&param_letter_group_script_save=&param_chinese_checkbox_save=0&param_services2filter_save=getHolding&param_services2filter_save=getFullTxt&param_current_view_save=table&param_jumpToPage_save=1&param_type_save=textSearch&param_category_save=2&param_textSearchType_save=contains&param_ui_control_scripts_save=&&param_type_value=browseLetterGroup&param_jumpToPage_value=&param_pattern_value=&param_letter_group_value=0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9&param_letter_group_script_value=Latin">0-9</a>
 							<a href="http://findit.lib.utexas.edu/utaustin/az?&param_sid_save=239076df43b3099044faa5e68d3650de&param_category_search_type_save=browseCategory&param_letter_group_script_save=Latin&param_current_view_save=table&param_category_save=2&param_textSearchType_save=contains&param_lang_save=eng&param_chinese_checkbox_type_save=Pinyin&param_perform_save=searchTitle&param_letter_group_save=0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9&param_chinese_checkbox_save=0&param_services2filter_save=getHolding&param_services2filter_save=getFullTxt&param_pattern_save=&param_jumpToPage_save=&param_type_save=browseLetterGroup&param_ui_control_scripts_save=&&param_type_value=browseLetterGroup&param_jumpToPage_value=&param_pattern_value=&param_letter_group_value=A&param_letter_group_script_value=Latin">A</a>
@@ -260,12 +262,13 @@ echo '
 					<div id="searchtop">
 						<div style="margin-top:1em;">
 							<form action="/sitescripts/search-box-scout/searchbox-scout.php" method="get">
+							<fieldset>
 							<input type="hidden" id="engine" name="engine" value="site" />
 								<input type="textfield" size="65" name="query" id="query">
 								<input class="findbutton" type="submit" value="Search"></input>
+								<p style="margin-left: .5em;">Search our site for things like <a href="/about/directory">staff</a>, <a href="/about/hours">hours</a>, and <a href="/services/computing">computers</a></p>
 								<div style="clear:both;"></div>
-								<p style="margin-top: 0;margin-left: .5em;">Search our site for things like staff, hours, and computers</p>
-								<div style="clear:both;"></div>
+							</fieldset>
 							</form>
 						</div>
 					</div>
@@ -288,24 +291,25 @@ echo '
 			<div id="searchcontent" class="gradient">
 				<div id="searchtop">
 					<div style="float:left;">
-					<img src="/sitescripts/search-box-scout/logo2.png" style="vertical-align: middle" />
+					<img src="/images/scout/logo2.png" style="vertical-align: middle" />
 					</div>
 					
 					<div style="margin-top:1em;">
 					<form action="/sitescripts/search-box-scout/searchbox-scout.php" method="get">
+					<fieldset>
+						<input type="hidden" id="engine" name="engine" value="all" />
 						<input type="textfield" size="50" name="query" id="query">
-						<input class="findbutton" type="submit" value="find">
-					
-					</input>
-					<p style="margin-top: 0; float: left;">Find articles, books, media, and more in one search</p>
-					<p style="float: right; margin-top: 0;"><a href="#">Advanced Search</a></p>
-					<div style="clear:both;"></div>
+						<input type="submit" class="findbutton" value="Find"></input>
+						<p style="margin-top: 0; float: left;">Find articles, books, media, and more in one search</p>
+						<p style="float: right; margin-top: 0; clear: right;"><a href="http://utexas.summon.serialssolutions.com/advanced">Advanced Search</a></p>
+						<div style="clear:both;"></div>
+					</fieldset>
 					</form>
 					</div>
 				</div>
 				<div id="searchbottom">
 					<ul id="searchbottom-links">
-						<li><a href="#">scoUT Mobile</a></li>
+						<li><a href="http://utexas.summon.serialssolutions.com/">scoUT Mobile</a></li>
 						<li><a href="#">Search Tips</a></li>
 						<li><a href="#">Feedback</a></li>
 					</ul>	
