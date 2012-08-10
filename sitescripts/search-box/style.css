@@ -102,8 +102,8 @@ fieldset > span {
 
 #searchtabs {
 	position: relative;
-	top: 20px;
-	left: 30px;
+	top: 2.5em;
+	left: 2em;
 	z-index: 100;
 }
 
@@ -192,8 +192,8 @@ nav li {
 
 #searchcontent {
 	position: relative;
-	top: 20px;
-	left: 20px;
+	top: 2.5em;
+	left: 1.25em;
 	width: 100%;
 	/*border: 1px solid black;*/
 	/*height: 220px;*/
