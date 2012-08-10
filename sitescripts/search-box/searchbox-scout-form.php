@@ -15,7 +15,7 @@ echo '
 			<div id="searchcontent" class="gradient">
 				<div id="searchtop">
 					<div style="float:left;">
-					<img src="/sitescripts/search-box-scout/logo2.png" style="vertical-align: middle" />
+					<img src="/images/scout/logo2.png" style="vertical-align: middle" />
 					</div>
 					
 					<div style="margin-top:1em;">
@@ -49,7 +49,7 @@ echo '
 			<div id="searchcontent" class="gradient">
 				<div id="searchtop">
 					<div style="float:left;">
-					<img src="/sitescripts/search-box-scout/logo2.png" style="vertical-align: middle" />
+					<img src="/images/scout/logo2.png" style="vertical-align: middle" />
 					</div>
 					
 					<div style="margin-top:1em;">
@@ -291,7 +291,7 @@ echo '
 			<div id="searchcontent" class="gradient">
 				<div id="searchtop">
 					<div style="float:left;">
-					<img src="/sitescripts/search-box-scout/logo2.png" style="vertical-align: middle" />
+					<img src="/images/scout/logo2.png" style="vertical-align: middle" />
 					</div>
 					
 					<div style="margin-top:1em;">
