@@ -25,12 +25,12 @@ if ($engine=="catalog" or $engine=="journals") {
 }
 
 if (isset($_GET['engine'])){ //Determine search URL based on input (engine, subengine)
-	if ($engine=="all") {header("Location: http://utexas.summon.serialssolutions.com/search?s.q=". urlencode($query) .'');}
+	if ($engine=="all") {header("Location: http://utexas.summon.serialssolutions.com/search?s.q=". urlencode($query) .'&keep_r=true');}
 	else if ($engine=="articles") {
 		//Deterine which flags are set for Article Options
 		//If no options are selected
 		if ($artoption == '') {
-			header("Location: http://utexas.summon.serialssolutions.com/search?s.cmd=addFacetValueFilters(ContentType,Conference+Proceeding,Journal+Article,Market+Research,Newsletter,Newspaper+Article,Paper,Trade+Publication+Article)&s.q=" . urlencode($query) . '');
+			header("Location: http://utexas.summon.serialssolutions.com/search?s.cmd=addFacetValueFilters(ContentType,Conference+Proceeding,Journal+Article,Market+Research,Newsletter,Newspaper+Article,Paper,Trade+Publication+Article)&s.q=" . urlencode($query) . '&keep_r=true');
 		}	
 		else {
 			//Grab each value set from form post for article_option
@@ -39,13 +39,13 @@ if (isset($_GET['engine'])){ //Determine search URL based on input (engine, sube
 				$n = $n + $f;//Sum them to determine appropriate behavior
 			};
 			if ($n == 3) { //If both are selected
-				header('Location: http://utexas.summon.serialssolutions.com/search?s.cmd=addFacetValueFilters(IsFullText,true)&s.fvf%5B%5D=IsPeerReviewed,true,&s.fvf%5B%5D=ContentType,Newsletter,&s.fvf%5B%5D=ContentType,Market+Research,&s.fvf%5B%5D=ContentType,Trade+Publication+Article,&s.fvf%5B%5D=ContentType,Newspaper+Article,&s.fvf%5B%5D=ContentType,Paper,&s.fvf%5B%5D=ContentType,Conference+Proceeding,&s.fvf%5B%5D=ContentType,Journal+Article,&s.q=' . urlencode($query) . '');}
+				header('Location: http://utexas.summon.serialssolutions.com/search?s.cmd=addFacetValueFilters(IsFullText,true)&s.fvf%5B%5D=IsPeerReviewed,true,&s.fvf%5B%5D=ContentType,Newsletter,&s.fvf%5B%5D=ContentType,Market+Research,&s.fvf%5B%5D=ContentType,Trade+Publication+Article,&s.fvf%5B%5D=ContentType,Newspaper+Article,&s.fvf%5B%5D=ContentType,Paper,&s.fvf%5B%5D=ContentType,Conference+Proceeding,&s.fvf%5B%5D=ContentType,Journal+Article,&s.q=' . urlencode($query) . '&keep_r=true');}
 			//If only 'full text' is selected
 			else if ($n == 2) {
-				header('Location: http://utexas.summon.serialssolutions.com/search?s.cmd=addFacetValueFilters(IsFullText,true)&s.fvf%5B%5D=ContentType,Newsletter,&s.fvf%5B%5D=ContentType,Market+Research,&s.fvf%5B%5D=ContentType,Trade+Publication+Article,&s.fvf%5B%5D=ContentType,Newspaper+Article,&s.fvf%5B%5D=ContentType,Paper,&s.fvf%5B%5D=ContentType,Conference+Proceeding,&s.fvf%5B%5D=ContentType,Journal+Article,&s.q=' . urlencode($query) . '');}
+				header('Location: http://utexas.summon.serialssolutions.com/search?s.cmd=addFacetValueFilters(IsFullText,true)&s.fvf%5B%5D=ContentType,Newsletter,&s.fvf%5B%5D=ContentType,Market+Research,&s.fvf%5B%5D=ContentType,Trade+Publication+Article,&s.fvf%5B%5D=ContentType,Newspaper+Article,&s.fvf%5B%5D=ContentType,Paper,&s.fvf%5B%5D=ContentType,Conference+Proceeding,&s.fvf%5B%5D=ContentType,Journal+Article,&s.q=' . urlencode($query) . '&keep_r=true');}
 			//If only 'peer-reviewed' is selected
 			else if ($n == 1) {
-				header('Location: http://utexas.summon.serialssolutions.com/search?s.cmd=addFacetValueFilters(IsPeerReviewed,true)&s.fvf%5B%5D=ContentType,Newsletter,&s.fvf%5B%5D=ContentType,Market+Research,&s.fvf%5B%5D=ContentType,Trade+Publication+Article,&s.fvf%5B%5D=ContentType,Newspaper+Article,&s.fvf%5B%5D=ContentType,Paper,&s.fvf%5B%5D=ContentType,Conference+Proceeding,&s.fvf%5B%5D=ContentType,Journal+Article,&s.q=' . urlencode($query) . '');}
+				header('Location: http://utexas.summon.serialssolutions.com/search?s.cmd=addFacetValueFilters(IsPeerReviewed,true)&s.fvf%5B%5D=ContentType,Newsletter,&s.fvf%5B%5D=ContentType,Market+Research,&s.fvf%5B%5D=ContentType,Trade+Publication+Article,&s.fvf%5B%5D=ContentType,Newspaper+Article,&s.fvf%5B%5D=ContentType,Paper,&s.fvf%5B%5D=ContentType,Conference+Proceeding,&s.fvf%5B%5D=ContentType,Journal+Article,&s.q=' . urlencode($query) . '&keep_r=true');}
 		}
 	}
 	else if ($engine=="catalog") {

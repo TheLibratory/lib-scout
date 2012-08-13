@@ -15,7 +15,7 @@ echo '
 			<div id="searchcontent" class="gradient">
 				<div id="searchtop">
 					<div style="float:left;">
-					<img src="/images/scout/logo2.png" style="vertical-align: middle" />
+					<img src="/images/scout/logo2.png" style="vertical-align: middle" alt="powered by scoUT" />
 					</div>
 					
 					<div style="margin-top:1em;">
@@ -24,7 +24,7 @@ echo '
 						<input type="hidden" id="engine" name="engine" value="all" />
 						<input type="textfield" size="50" name="query" id="query">
 						<input type="submit" class="findbutton" value="Find"></input>
-						<p>Find articles, books, media, and more in one search</p>
+						<p><label for="query">Find articles, books, media, and more in one search</label></p>
 						<div style="clear:both;"></div>
 					</fieldset>
 					</form>
@@ -49,7 +49,7 @@ echo '
 			<div id="searchcontent" class="gradient">
 				<div id="searchtop">
 					<div style="float:left;">
-					<img src="/images/scout/logo2.png" style="vertical-align: middle" />
+					<img src="/images/scout/logo2.png" style="vertical-align: middle" alt="powered by scoUT" />
 					</div>
 					
 					<div style="margin-top:1em;">
@@ -58,7 +58,7 @@ echo '
 						<input type="hidden" id="engine" name="engine" value="articles" />
 							<input type="textfield" size="50" name="query" id="query" />
 							<input class="findbutton" type="submit" value="Find" />
-							<p>Find articles in journals and magazines</p>
+							<p><label for="query">Find articles in journals and magazines</label></p>
 							<div style="clear:both;"></div>
 								<div style="float: left; margin: 0">
 									<p style="display: inline;"><input type="checkbox" name="article_option[]" value="1" id="peer-review" checked="checked" style="position: relative; top: 2px;" /><label for="peer-review"> Peer-reviewed only</label></p>
@@ -100,7 +100,7 @@ echo '
 									<option value="oclc">OCLC</option>
 								</select>
 								<input class="findbutton" type="submit" value="Search"></input>
-								<p style="margin-left: 10.25em">Books, journals, DVDs and more</p>
+								<p style="margin-left: 10.25em"><label for="query">Books, journals, DVDs and more</label></p>
 								<div style="clear:both;"></div>
 								<table width="100%">
 									<tr>
@@ -151,7 +151,7 @@ echo '
 							<input type="hidden" id="engine" name="engine" value="databases" />
 								<input type="textfield" size="65" name="query" id="query">
 								<input class="findbutton" type="submit" value="Find"></input>
-								<p style="margin-left: .5em;">Find databases by name or subject</p>
+								<p style="margin-left: .5em;"><label for="query">Find databases by name or subject</label></p>
 								<p style="margin-top: 0; float: left; margin-left: .5em;">Popular Databases: <a href="/indexes/titles.php?id=6">Academic Search Complete</a>, <a href="/indexes/titles.php?id=214">JSTOR</a>, <a href="/indexes/titles.php?id=299">PubMed</a></p>
 								<div style="clear:both;"></div>
 							</fieldset>
@@ -266,7 +266,7 @@ echo '
 							<input type="hidden" id="engine" name="engine" value="site" />
 								<input type="textfield" size="65" name="query" id="query">
 								<input class="findbutton" type="submit" value="Search"></input>
-								<p style="margin-left: .5em;">Search our site for things like <a href="/about/directory">staff</a>, <a href="/about/hours">hours</a>, and <a href="/services/computing">computers</a></p>
+								<p style="margin-left: .5em;"><label for="query">Search our site for things like <a href="/about/directory">staff</a>, <a href="/about/hours">hours</a>, and <a href="/services/ils">interlibrary services</a></label></p>
 								<div style="clear:both;"></div>
 							</fieldset>
 							</form>
@@ -274,11 +274,13 @@ echo '
 					</div>
 					
 					<div id="searchbottom">
+						<!-- removing bottom links
 						<ul id="searchbottom-links">
 							<li><a href="#">scoUT Mobile</a></li>
 							<li><a href="#">Search Tips</a></li>
 							<li><a href="#">Feedback</a></li>
-						</ul>	
+						</ul> 
+						-->	
 						<div style="clear:both;"></div>
 					</div>
 				</div>	
