@@ -258,10 +258,11 @@ echo '
 // --- Site Search Tab ---
 else if ($query=="site"){
 echo '
+
 			<div id="searchcontent" class="gradient">
 					<div id="searchtop">
 						<div style="margin-top:1em;">
-							<form action="/sitescripts/search-box-scout/searchbox-scout.php" method="get">
+							<form action="/sitescripts/search-box-scout/searchbox-scout.php" method="get" name="site-search" id="site-search">
 							<fieldset>
 							<input type="hidden" id="engine" name="engine" value="site" />
 								<input type="textfield" size="65" name="query" id="query">
@@ -283,7 +284,26 @@ echo '
 						-->	
 						<div style="clear:both;"></div>
 					</div>
-				</div>	
+				</div>				
+				<script type="text/javascript" language="javascript">
+				 (function() {
+					var id = document.getElementById("site-search");
+					if (id && id.query) {
+					  var name = id.query;
+					  var unclicked = function() {
+						  if (name.value == "") {
+							  name.style.background = "#ffffff url(sitescripts/search-box-scout/googbg.png) left no-repeat";
+						  }
+					   };
+					   var clicked = function() {
+						  name.style.background = "#ffffff";
+					   };
+					name.onfocus = clicked;
+					name.onblur = unclicked;
+					unclicked();
+					}
+				  })();
+				</script>
 ';
 }
 
