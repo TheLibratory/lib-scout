@@ -167,6 +167,12 @@ fieldset > span {
 	text-decoration: none
 }
 
+#searchtabs li.active:hover {
+	background: #8bc8c6;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+}
 #searchcontent {
 	position: relative;
 	top: 2.5em;
