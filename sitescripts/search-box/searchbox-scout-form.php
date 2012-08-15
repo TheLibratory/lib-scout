@@ -285,14 +285,14 @@ echo '
 						<div style="clear:both;"></div>
 					</div>
 				</div>				
-				<script type="text/javascript" language="javascript">
+				<!-- <script type="text/javascript" language="javascript">
 				 (function() {
 					var id = document.getElementById("site-search");
 					if (id && id.query) {
 					  var name = id.query;
 					  var unclicked = function() {
 						  if (name.value == "") {
-							  name.style.background = "#ffffff url(sitescripts/search-box-scout/googbg.png) left no-repeat";
+							  name.style.background = "#ffffff url(sitescripts/search-box-scout/googbg.png) right no-repeat";
 						  }
 					   };
 					   var clicked = function() {
@@ -303,7 +303,7 @@ echo '
 					unclicked();
 					}
 				  })();
-				</script>
+				</script> -->
 ';
 }
 

@@ -53,10 +53,6 @@ $(document).ready(function(){
 						else {
 							$('#query').attr("value", usertext);
 						}
-				
-						$('#query').click(function() {
-							$(this).attr("value", ""); 
-	    				});
 					}
 					
 					if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=articles"){
@@ -69,10 +65,6 @@ $(document).ready(function(){
 						else {
 							$('#query').attr("value", usertext);
 						}
-
-						$('#query').click(function() {
-							$(this).attr("value", ""); 
-	    				});
 					}
 					
 					if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=catalog"){
@@ -85,10 +77,6 @@ $(document).ready(function(){
 						else {
 							$('#query').attr("value", usertext);
 						}
-
-						$('#query').click(function() {
-							$(this).attr("value", ""); 
-	    				});
 					}
 					
 					if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=databases"){
@@ -101,10 +89,6 @@ $(document).ready(function(){
 						else {
 							$('#query').attr("value", usertext);
 						}
-
-						$('#query').click(function() {
-							$(this).attr("value", ""); 
-	    				});
 					}
 					
 					if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=journals"){
@@ -117,10 +101,6 @@ $(document).ready(function(){
 						else {
 							$('#query').attr("value", usertext);
 						}
-
-						$('#query').click(function() {
-							$(this).attr("value", ""); 
-	    				});
 					}
 					
 					if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=site"){
@@ -133,10 +113,6 @@ $(document).ready(function(){
 						else {
 							$('#query').attr("value", usertext);
 						}
-
-						$('#query').click(function() {
-							$(this).attr("value", ""); 
-	    				});
 					}
 					
 	   			});//end ajaxComplete
