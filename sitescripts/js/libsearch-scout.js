@@ -1,37 +1,26 @@
 // When the document loads do everything inside here ...
 $(document).ready(function(){
 
-	//Toggle Report Settings Content
-	$('div.toggle_content').hide().end().find("div.toggle_label").click( function() {
-        	$("div.toggle_content").slideToggle(800);
-                return false;
-	});
-	
-	/*function to loop through helper text array*/
-	function in_array(string, array)  {  
-		for (i = 0; i < array.length; i++)	{  
-		   if(array[i] == string)  {  
-			  return true;  
-		   }
-		}
-	return false;  
-	} 
-	
-	/*Helper text Array*/
-	var helpertext = [""];
-
-	/*Default load of helper text*/
-	$('#query').attr("value", helpertext[0]);
+	// Default load of query textfield
+	$('#query').attr('value', '');
 	$('#query').click(function () {
 		$(this).attr("value", ""); 
     });
+	
+	function tabclick() {
+		$('#bazinga').animate({opacity:0}, 10);	
+		var usertext = $('#query').attr("value");
+		var thisurl = $(this).attr("href");
+		scoutformcall(thisurl,usertext);
+		$('#bazinga').fadeTo("slow", 1);
+		return false;
+	}
 
-
-	function iiikwformcall(thisurl, usertext) {
+	function scoutformcall(thisurl, usertext) {
 		$.ajax({
 	   		type: "get",
 			async: false,
-           		url: thisurl,
+           	url: thisurl,
 			timeout: 9000,
 			cache: true,
 			error: function(){
@@ -42,80 +31,18 @@ $(document).ready(function(){
 	   			$('#bazinga').show(1, function(event, request, settings){
 	   				result=msg;
 	   				$(this).html(result);
-
-					if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=all"){
-						if (in_array(usertext, helpertext)){
-							$('#query').attr("value", helpertext[0]);
-						}						
-						else if (usertext == ""){
-							$('#query').attr("value", helpertext[0]);
-						}
-						else {
-							$('#query').attr("value", usertext);
-						}
-					}
 					
-					if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=articles"){
-						if (in_array(usertext, helpertext)){
-							$('#query').attr("value", helpertext[0]);
-						}						
-						else if (usertext == ""){
-							$('#query').attr("value", helpertext[0]);
-						}
-						else {
-							$('#query').attr("value", usertext);
-						}
-					}
-					
-					if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=catalog"){
-						if (in_array(usertext, helpertext)){
-							$('#query').attr("value", helpertext[0]);
-						}						
-						else if (usertext == ""){
-							$('#query').attr("value", helpertext[0]);
-						}
-						else {
-							$('#query').attr("value", usertext);
-						}
-					}
-					
-					if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=databases"){
-						if (in_array(usertext, helpertext)){
-							$('#query').attr("value", helpertext[0]);
-						}						
-						else if (usertext == ""){
-							$('#query').attr("value", helpertext[0]);
-						}
-						else {
-							$('#query').attr("value", usertext);
-						}
-					}
-					
-					if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=journals"){
-						if (in_array(usertext, helpertext)){
-							$('#query').attr("value", helpertext[0]);
-						}						
-						else if (usertext == ""){
-							$('#query').attr("value", helpertext[0]);
-						}
-						else {
-							$('#query').attr("value", usertext);
-						}
-					}
-					
-					if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=site"){
-						if (in_array(usertext, helpertext)){
-							$('#query').attr("value", helpertext[0]);
-						}						
-						else if (usertext == ""){
-							$('#query').attr("value", helpertext[0]);
-						}
-						else {
-							$('#query').attr("value", usertext);
-						}
-					}
-					
-	   			});//end ajaxComplete
+					//Detect if this is the 'site' tab (not using this functionality)
+					// if (thisurl == "/sitescripts/search-box-scout/searchbox-scout-form.php?query=site"){ 
+						// if (usertext) {$('#query').attr('value', usertext);}
+						// else {$('#query').attr('value', '');}
+					// }
+					//If not- just do the normal stuff
+					//else {
+						if (usertext) {$('#query').attr('value', usertext);}
+						else {$('#query').attr('value', '');}
+					//}
+				});//end ajaxComplete
 	  		}//end success
            		
  		});//ajax
@@ -123,71 +50,13 @@ $(document).ready(function(){
 	
 	$('#searchtabs li').click(function() {
 		var parent = $(this);
-		
-		if (!parent.hasClass('active')) {
-			parent.addClass('active').siblings().removeClass('active');
-		}
+		if (!parent.hasClass('active')) {parent.addClass('active').siblings().removeClass('active');}
 	});
 	
-	$('#all').attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=all');
-	$('#all').click(function() {
-		$('#bazinga').animate({opacity:0}, 10);	
-		var usertext = $('#query').attr("value");
-		var thisurl = $(this).attr("href");
-		iiikwformcall(thisurl,usertext);
-		$('#bazinga').fadeTo("slow", 1);
-		return false;
-	});
-
-	$('#articles').attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=articles');
-	$('#articles').click( function() {
-		$('#bazinga').animate({opacity:0}, 10);	
-		var usertext = $('#query').attr("value");
-		var thisurl = $(this).attr("href");
-		iiikwformcall(thisurl,usertext);
-		$('#bazinga').fadeTo("slow", 1);
-		return false;
-	});
-	
-	$('#catalog').attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=catalog');
-	$('#catalog').click( function() {		
-		$('#bazinga').animate({opacity:0}, 10);	
-		var usertext = $('#query').attr("value");
-		var thisurl = $(this).attr("href");
-		iiikwformcall(thisurl,usertext);
-		$('#bazinga').fadeTo("slow", 1);
-		return false;
-	});
-	
-	$('#databases').attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=databases');
-	$('#databases').click( function() {
-		$('#bazinga').animate({opacity:0}, 10);	
-		var usertext = $('#query').attr("value");
-		var thisurl = $(this).attr("href");
-		iiikwformcall(thisurl,usertext);
-		$('#bazinga').fadeTo("slow", 1);
-		return false;
-	});
-	
-	$('#journals').attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=journals');
-	$('#journals').click( function() {		
-		$('#bazinga').animate({opacity:0}, 10);	
-		var usertext = $('#query').attr("value");
-		var thisurl = $(this).attr("href");
-		iiikwformcall(thisurl,usertext);
-		$('#bazinga').fadeTo("slow", 1);
-		return false;
-	});
-	
-	$('#site').attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=site');
-	$('#site').click( function() {
-		$('#bazinga').animate({opacity:0}, 10);	
-		var usertext = $('#query').attr("value");
-		var thisurl = $(this).attr("href");
-		iiikwformcall(thisurl,usertext);
-		$('#bazinga').fadeTo("slow", 1);
-		return false;
-	});
-
+	//For each tab, make sure it sets the href + click behavior
+	var tabinfo = ["all", "articles", "catalog", "databases", "journals", "site"]; //Each tab id
+	var len = tabinfo.length;
+	for(var i=0; i<len; i++) {
+		$('#' + tabinfo[i]).attr('href', '/sitescripts/search-box-scout/searchbox-scout-form.php?query=' + tabinfo[i]).click(tabclick);
+	}
 }); //close $(document)
-

@@ -35,7 +35,7 @@ echo '
 						<li><a href="http://utexas.summon.serialssolutions.com/search/mobile">scoUT Mobile</a></li>
 						<li><a href="http://utexas.summon.serialssolutions.com/advanced">Advanced Search</a></li>
 						<li><a href="#">Search Tips</a></li>
-						<li><a href="#">Feedback</a></li>
+						<li><a href="http://www.surveymonkey.com/s/YNV2T6L">Feedback</a></li>
 					</ul>	
 					<div style="clear:both;"></div>
 				</div>
@@ -262,7 +262,7 @@ echo '
 			<div id="searchcontent" class="gradient">
 					<div id="searchtop">
 						<div style="margin-top:1em;">
-							<form action="/sitescripts/search-box-scout/searchbox-scout.php" method="get" name="site-search" id="site-search">
+							<form action="/sitescripts/search-box-scout/searchbox-scout.php" method="get" name="sitesearch" id="googimg">
 							<fieldset>
 							<input type="hidden" id="engine" name="engine" value="site" />
 								<input type="textfield" size="65" name="query" id="query">
@@ -275,35 +275,35 @@ echo '
 					</div>
 					
 					<div id="searchbottom">
-						<!-- removing bottom links
 						<ul id="searchbottom-links">
-							<li><a href="#">scoUT Mobile</a></li>
-							<li><a href="#">Search Tips</a></li>
-							<li><a href="#">Feedback</a></li>
+							<li><a href="/about/hours/">Hours</a></li>
+							<li><a href="/about/librarymap/">Library Map</a></li>
+							<li><a href="/services/study.html">Study Spaces</a></li>
+							<li><a href="/news">News</a></li>
+							<li><a href="/indexes/index.php">Databases</a></li>
 						</ul> 
-						-->	
 						<div style="clear:both;"></div>
 					</div>
 				</div>				
-				<!-- <script type="text/javascript" language="javascript">
+				<script type="text/javascript" language="javascript">
 				 (function() {
-					var id = document.getElementById("site-search");
+					var id = document.getElementById("googimg");
 					if (id && id.query) {
 					  var name = id.query;
 					  var unclicked = function() {
-						  if (name.value == "") {
-							  name.style.background = "#ffffff url(sitescripts/search-box-scout/googbg.png) right no-repeat";
-						  }
-					   };
-					   var clicked = function() {
-						  name.style.background = "#ffffff";
-					   };
+						if (name.value == "") {
+							name.style.background = "#ffffff url(sitescripts/search-box-scout/googbg.png) right no-repeat";
+						} else { name.style.background = "#ffffff"; }
+					  };
+					  var clicked = function() {
+						name.style.background = "#ffffff";
+					  };
 					name.onfocus = clicked;
 					name.onblur = unclicked;
 					unclicked();
 					}
 				  })();
-				</script> -->
+				</script>
 ';
 }
 
@@ -333,7 +333,7 @@ echo '
 					<ul id="searchbottom-links">
 						<li><a href="http://utexas.summon.serialssolutions.com/">scoUT Mobile</a></li>
 						<li><a href="#">Search Tips</a></li>
-						<li><a href="#">Feedback</a></li>
+						<li><a href="http://www.surveymonkey.com/s/YNV2T6L">Feedback</a></li>
 					</ul>	
 					<div style="clear:both;"></div>
 				</div>
