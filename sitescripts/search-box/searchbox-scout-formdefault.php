@@ -1,5 +1,5 @@
 <div id="search-main">
-	
+<div id="bgfade">
 	<div id="search-wrap">
 		<div id="leftside">
 			<div id="searchtabs">
@@ -27,4 +27,5 @@
 				</div>
 		</div>
 	</div>
+</div>
 </div>

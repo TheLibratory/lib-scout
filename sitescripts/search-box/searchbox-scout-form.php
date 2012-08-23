@@ -18,13 +18,13 @@ echo '
 					<img src="/images/scout/logo2.png" style="vertical-align: middle" alt="powered by scoUT" />
 					</div>
 					
-					<div style="margin-top:1em;">
+					<div style="margin: 1em 0 1em 0;">
 					<form action="/sitescripts/search-box-scout/searchbox-scout.php" method="get">
 					<fieldset>
 						<input type="hidden" id="engine" name="engine" value="all" />
 						<input type="textfield" size="50" name="query" id="query">
 						<input type="submit" class="findbutton" value="Find"></input>
-						<p><label for="query">Find articles, books, media, and more in one search</label></p>
+						<p><label for="query" style="margin-left: .5em;">Find articles, books, media, and more in one search</label></p>
 						<div style="clear:both;"></div>
 					</fieldset>
 					</form>
@@ -33,7 +33,7 @@ echo '
 				<div id="searchbottom">
 					<ul id="searchbottom-links">
 						<li><a href="http://utexas.summon.serialssolutions.com/search/mobile">scoUT Mobile</a></li>
-						<li><a href="http://utexas.summon.serialssolutions.com/advanced">Advanced Search</a></li>
+						<li><a href="http://utexas.summon.serialssolutions.com/advanced">scoUT Advanced Search</a></li>
 						<li><a href="#">Search Tips</a></li>
 						<li><a href="http://www.surveymonkey.com/s/YNV2T6L">Feedback</a></li>
 					</ul>	
@@ -58,11 +58,13 @@ echo '
 						<input type="hidden" id="engine" name="engine" value="articles" />
 							<input type="textfield" size="50" name="query" id="query" />
 							<input class="findbutton" type="submit" value="Find" />
-							<p><label for="query">Find articles in journals and magazines</label></p>
+							<p><label for="query" style="margin-left: .5em;">Find articles in journals and magazines</label></p>
 							<div style="clear:both;"></div>
-								<div style="float: left; margin: 0">
-									<p style="display: inline;"><input type="checkbox" name="article_option[]" value="1" id="peer-review" checked="checked" style="position: relative; top: 2px;" /><label for="peer-review"> Peer-reviewed only</label></p>
-									<p style="display: inline;"><input type="checkbox" name="article_option[]" value="2" id="full-text" checked="checked" style="position: relative; top: 2px;" /><label for="full-text"> Full text only</label></p>
+								<div style="float: left; margin-top: .5em">
+									<input type="checkbox" name="article_option[]" value="1" id="peer-review" checked="checked" style="position: relative; top: 2px;" />
+									<p><label for="peer-review"> Peer-reviewed only</label></p>
+									<input type="checkbox" name="article_option[]" value="2" id="full-text" checked="checked" style="position: relative; top: 2px;" />
+									<p><label for="full-text"> Full text only</label></p>
 								</div>
 							<div style="clear:both;"></div>
 						</fieldset>
@@ -72,7 +74,7 @@ echo '
 				<div id="searchbottom">
 					<ul id="searchbottom-links">
 						<li style="float: left;"><a href="http://utexas.summon.serialssolutions.com/search/mobile">scoUT Mobile</a></li>
-						<li><a href="http://utexas.summon.serialssolutions.com/advanced">Advanced Search</a></li>
+						<li><a href="http://utexas.summon.serialssolutions.com/advanced">scoUT Advanced Search</a></li>
 						<li style="float: right;"><a href="http://scholar.google.com/">Google Scholar</a></li>
 					</ul>	
 					<div style="clear:both;"></div>
@@ -92,7 +94,7 @@ echo '
 							<input type="hidden" id="engine" name="engine" value="catalog" />
 								<p style="display: inline;">Search <a href="http://catalog.lib.utexas.edu/">Catalog</a> for</p>
 								<input type="textfield" size="23" name="query" id="query">
-								<select name="parameter">
+								<select name="parameter"><label for="parameter" style="display:none;">Select search option</label>
 									<option value="key">keyword or phrase</option>
 									<option value="author">author</option>
 									<option value="title">title</option>
@@ -100,29 +102,35 @@ echo '
 									<option value="oclc">OCLC</option>
 								</select>
 								<input class="findbutton" type="submit" value="Search"></input>
-								<p style="margin-left: 10.25em"><label for="query">Books, journals, DVDs and more</label></p>
+								<p><label for="query" style="margin-left: 10.5em">Books, journals, DVDs and more</label></p>
 								<div style="clear:both;"></div>
-								<table width="100%">
+								<table width="100%" style="margin-top: .5em;">
 									<tr>
 										<td>
-											<input type="radio" name="subengine" value="any" class="checkbox" checked="yes" id="any" /><label for="any">Any format</label>
+											<input type="radio" name="subengine" value="any" class="checkbox" checked="yes" id="any" />
+											<p><label for="any">Any format</label></p>
 										</td>
 										<td>
-											<input type="radio" name="subengine" value="books" class="checkbox" id="books" /><label for="books">Books, eBooks</label>
+											<input type="radio" name="subengine" value="books" class="checkbox" id="books" />
+											<p><label for="books">Books, eBooks</label></p>
 										</td>
 										<td>
-											<input type="radio" name="subengine" value="articles" class="checkbox" id="article" /><label for="article">Journals, newspapers, magazines</label>
+											<input type="radio" name="subengine" value="articles" class="checkbox" id="article" />
+											<p><label for="article">Journals, newspapers, magazines</label></p>
 										</td>
 									</tr>
 									<tr>
 										<td>
-											<input type="radio" name="subengine" value="dvd" class="checkbox" id="dvd" /><label for="dvd">DVDs</label>
+											<input type="radio" name="subengine" value="dvd" class="checkbox" id="dvd" />
+											<p><label for="dvd">DVDs</label></p>
 										</td>
 										<td>
-											<input type="radio" name="subengine" value="cd" class="checkbox" id="cd" /><label for="cd">CDs</label>
+											<input type="radio" name="subengine" value="cd" class="checkbox" id="cd" />
+											<p><label for="cd">CDs</label></p>
 										</td>
 										<td>
-											<input type="radio" name="subengine" value="map" class="checkbox" id="map" /><label for="map">Maps</label>
+											<input type="radio" name="subengine" value="map" class="checkbox" id="map" />
+											<p><label for="map">Maps</label></p>
 										</td>
 								</table>
 							</fieldset>
@@ -151,8 +159,10 @@ echo '
 							<input type="hidden" id="engine" name="engine" value="databases" />
 								<input type="textfield" size="65" name="query" id="query">
 								<input class="findbutton" type="submit" value="Find"></input>
-								<p style="margin-left: .5em;"><label for="query">Find databases by name or subject</label></p>
-								<p style="margin-top: 0; float: left; margin-left: .5em;">Popular Databases: <a href="/indexes/titles.php?id=6">Academic Search Complete</a>, <a href="/indexes/titles.php?id=214">JSTOR</a>, <a href="/indexes/titles.php?id=299">PubMed</a></p>
+								<br>
+								<p><label style="margin-left: .5em;" for="query">Find databases by name or subject</label></p>
+								<br /><br />
+								<p style="margin-left: .5em;">Popular Databases: <a href="/indexes/titles.php?id=6">Academic Search Complete</a>, <a href="/indexes/titles.php?id=214">JSTOR</a>, <a href="/indexes/titles.php?id=299">PubMed</a></p>
 								<div style="clear:both;"></div>
 							</fieldset>
 							</form>
@@ -205,13 +215,17 @@ echo '
 						<div style="margin-top:1em;">
 							<form action="/sitescripts/search-box-scout/searchbox-scout.php" method="get">
 							<fieldset>
-							<input type="hidden" id="engine" name="engine" value="journals" />
+								<input type="hidden" id="engine" name="engine" value="journals" />
 								<input type="textfield" size="65" name="query" id="query">
+									<label for="query" style="display:none;">Search for journals by title</label>
 								<input class="findbutton" type="submit" value="Find"></input>
 								<div style="clear:both;"></div>
-								<input type="radio" name="subengine" value="ejournal" checked="yes" id="ejournal" /><span><label for="ejournal">Available online</label></span>
-								<input type="radio" name="subengine" value="pjournal" id="pjournal" /><span><label for="pjournal">Available in print</label></span>
-								<p style="margin-top: 1em;"><a href="/indexes/citation/">Find article from a citation</a></p>
+								<input type="radio" name="subengine" value="ejournal" checked="yes" id="ejournal" />
+									<p><label for="ejournal">Available online</label></p>
+								<input type="radio" name="subengine" value="pjournal" id="pjournal" />
+									<p><label for="pjournal">Available in print</label></p>
+								<br /><br />
+								<p style="margin-left: .5em;"><a href="/indexes/citation/">Find article from a citation</a></p>
 								<div style="clear:both;"></div>
 							</fieldset>
 							</form>
@@ -261,13 +275,15 @@ echo '
 
 			<div id="searchcontent" class="gradient">
 					<div id="searchtop">
-						<div style="margin-top:1em;">
+						<div style="margin: 1em 0 1em 0;">
 							<form action="/sitescripts/search-box-scout/searchbox-scout.php" method="get" name="sitesearch" id="googimg">
 							<fieldset>
-							<input type="hidden" id="engine" name="engine" value="site" />
-								<input type="textfield" size="65" name="query" id="query">
+								<input type="hidden" id="engine" name="engine" value="site" />
+								<input type="textfield" size="65" name="query" id="query" />
 								<input class="findbutton" type="submit" value="Search"></input>
-								<p style="margin-left: .5em;"><label for="query">Search our site for things like <a href="/about/directory">staff</a>, <a href="/about/hours">hours</a>, and <a href="/services/ils">interlibrary services</a></label></p>
+								<br />
+								<p><label for="query" style="margin-left: .5em;">Search our site for things like <a href="/about/directory">staff</a>, <a href="/about/hours">hours</a>, and <a href="/services/ils">interlibrary services</a></label></p>
+								
 								<div style="clear:both;"></div>
 							</fieldset>
 							</form>
@@ -280,7 +296,7 @@ echo '
 							<li><a href="/about/librarymap/">Library Map</a></li>
 							<li><a href="/services/study.html">Study Spaces</a></li>
 							<li><a href="/news">News</a></li>
-							<li><a href="/indexes/index.php">Databases</a></li>
+							<li><a href="/about/directory">Library Staff</a></li>
 						</ul> 
 						<div style="clear:both;"></div>
 					</div>
@@ -313,7 +329,7 @@ echo '
 			<div id="searchcontent" class="gradient">
 				<div id="searchtop">
 					<div style="float:left;">
-					<img src="/images/scout/logo2.png" style="vertical-align: middle" />
+					<img src="/images/scout/logo2.png" style="vertical-align: middle" alt="powered by scoUT" />
 					</div>
 					
 					<div style="margin-top:1em;">
@@ -322,8 +338,7 @@ echo '
 						<input type="hidden" id="engine" name="engine" value="all" />
 						<input type="textfield" size="50" name="query" id="query">
 						<input type="submit" class="findbutton" value="Find"></input>
-						<p style="margin-top: 0; float: left;">Find articles, books, media, and more in one search</p>
-						<p style="float: right; margin-top: 0; clear: right;"><a href="http://utexas.summon.serialssolutions.com/advanced">Advanced Search</a></p>
+						<p><label for="query">Find articles, books, media, and more in one search</label></p>
 						<div style="clear:both;"></div>
 					</fieldset>
 					</form>
@@ -331,7 +346,8 @@ echo '
 				</div>
 				<div id="searchbottom">
 					<ul id="searchbottom-links">
-						<li><a href="http://utexas.summon.serialssolutions.com/">scoUT Mobile</a></li>
+						<li><a href="http://utexas.summon.serialssolutions.com/search/mobile">scoUT Mobile</a></li>
+						<li><a href="http://utexas.summon.serialssolutions.com/advanced">scoUT Advanced Search</a></li>
 						<li><a href="#">Search Tips</a></li>
 						<li><a href="http://www.surveymonkey.com/s/YNV2T6L">Feedback</a></li>
 					</ul>	
