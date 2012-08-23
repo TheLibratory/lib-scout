@@ -21,9 +21,10 @@ echo '
 					<div style="margin: 1em 0 1em 0;">
 					<form action="/sitescripts/search-box-scout/searchbox-scout.php" method="get">
 					<fieldset>
-						<input type="hidden" id="engine" name="engine" value="all" />
-						<input type="textfield" size="50" name="query" id="query">
+						<input type="hidden" id="engine" name="engine" value="all"></input>
+						<input type="textfield" size="50" name="query" id="query"></input>
 						<input type="submit" class="findbutton" value="Find"></input>
+						<br />
 						<p><label for="query" style="margin-left: .5em;">Find articles, books, media, and more in one search</label></p>
 						<div style="clear:both;"></div>
 					</fieldset>
@@ -55,9 +56,10 @@ echo '
 					<div style="margin-top:1em;">
 						<form action="/sitescripts/search-box-scout/searchbox-scout.php" method="get">
 						<fieldset>
-						<input type="hidden" id="engine" name="engine" value="articles" />
-							<input type="textfield" size="50" name="query" id="query" />
-							<input class="findbutton" type="submit" value="Find" />
+						<input type="hidden" id="engine" name="engine" value="articles"></input>
+							<input type="textfield" size="50" name="query" id="query"></input>
+							<input class="findbutton" type="submit" value="Find"></input>
+							<br />
 							<p><label for="query" style="margin-left: .5em;">Find articles in journals and magazines</label></p>
 							<div style="clear:both;"></div>
 								<div style="float: left; margin-top: .5em">
@@ -159,7 +161,7 @@ echo '
 							<input type="hidden" id="engine" name="engine" value="databases" />
 								<input type="textfield" size="65" name="query" id="query">
 								<input class="findbutton" type="submit" value="Find"></input>
-								<br>
+								<br />
 								<p><label style="margin-left: .5em;" for="query">Find databases by name or subject</label></p>
 								<br /><br />
 								<p style="margin-left: .5em;">Popular Databases: <a href="/indexes/titles.php?id=6">Academic Search Complete</a>, <a href="/indexes/titles.php?id=214">JSTOR</a>, <a href="/indexes/titles.php?id=299">PubMed</a></p>
@@ -282,7 +284,7 @@ echo '
 								<input type="textfield" size="65" name="query" id="query" />
 								<input class="findbutton" type="submit" value="Search"></input>
 								<br />
-								<p><label for="query" style="margin-left: .5em;">Search our site for things like <a href="/about/directory">staff</a>, <a href="/about/hours">hours</a>, and <a href="/services/ils">interlibrary services</a></label></p>
+								<p><label for="query" style="margin-left: .5em;">Search our site</label></p>
 								
 								<div style="clear:both;"></div>
 							</fieldset>
@@ -332,13 +334,13 @@ echo '
 					<img src="/images/scout/logo2.png" style="vertical-align: middle" alt="powered by scoUT" />
 					</div>
 					
-					<div style="margin-top:1em;">
+					<div style="margin: 1em 0 1em 0;">
 					<form action="/sitescripts/search-box-scout/searchbox-scout.php" method="get">
 					<fieldset>
-						<input type="hidden" id="engine" name="engine" value="all" />
-						<input type="textfield" size="50" name="query" id="query">
+						<input type="hidden" id="engine" name="engine" value="all"></input>
+						<input type="textfield" size="50" name="query" id="query"></input>
 						<input type="submit" class="findbutton" value="Find"></input>
-						<p><label for="query">Find articles, books, media, and more in one search</label></p>
+						<p><label for="query" style="margin-left: .5em;">Find articles, books, media, and more in one search</label></p>
 						<div style="clear:both;"></div>
 					</fieldset>
 					</form>
