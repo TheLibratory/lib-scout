@@ -35,7 +35,7 @@ echo '
 					<ul id="searchbottom-links">
 						<li><a href="http://utexas.summon.serialssolutions.com/search/mobile">scoUT Mobile</a></li>
 						<li><a href="http://utexas.summon.serialssolutions.com/advanced">scoUT Advanced Search</a></li>
-						<li><a href="#">Search Tips</a></li>
+						<li><a href="/scout/searchtips">Search Tips</a></li>
 						<li><a href="http://www.surveymonkey.com/s/YNV2T6L">Feedback</a></li>
 					</ul>	
 					<div style="clear:both;"></div>
@@ -340,6 +340,7 @@ echo '
 						<input type="hidden" id="engine" name="engine" value="all"></input>
 						<input type="textfield" size="50" name="query" id="query"></input>
 						<input type="submit" class="findbutton" value="Find"></input>
+						<br />
 						<p><label for="query" style="margin-left: .5em;">Find articles, books, media, and more in one search</label></p>
 						<div style="clear:both;"></div>
 					</fieldset>
@@ -350,7 +351,7 @@ echo '
 					<ul id="searchbottom-links">
 						<li><a href="http://utexas.summon.serialssolutions.com/search/mobile">scoUT Mobile</a></li>
 						<li><a href="http://utexas.summon.serialssolutions.com/advanced">scoUT Advanced Search</a></li>
-						<li><a href="#">Search Tips</a></li>
+						<li><a href="/scout/searchtips">Search Tips</a></li>
 						<li><a href="http://www.surveymonkey.com/s/YNV2T6L">Feedback</a></li>
 					</ul>	
 					<div style="clear:both;"></div>

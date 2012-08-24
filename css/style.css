@@ -275,10 +275,3 @@ fieldset > span {
 	position:relative;
 	top:1px;
 }
-
-/* Temporary spotlight header styling */
-#spotlight-listing li h3 {
-	background-color: #398380;
-	background-image: none;
-	text-shadow: #333 1px 1px 0px;
-}
