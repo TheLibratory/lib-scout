@@ -1,3 +1,12 @@
+/* 
+Styling & Design elements organized by top-level markup tags
+then IDs followed by classes.  Organized by hierarchy in
+.html markup (top -> down)
+
+August 2012
+*/
+
+/* scoUT font include */
 @font-face {
     font-family: 'YanoneKaffeesatzBold';
     src: url('/fonts/yanonekaffeesatz-bold-webfont.eot');
@@ -10,93 +19,51 @@
 
 }
 
-#searchtop p {
-	font-family: Verdana, Geneva;
-	font-size: .7em;
-	color: #222;
-	display: inline;
-}
 
-a {
-	text-decoration: none;
-	border: none;
-}
-
-form {
-	margin-bottom: 0;
-}
-
+/* ----- Tag-Level Elements ----- */
 fieldset {
 	border: 0;
 	margin: 0;
 	padding: 0;
 }
 
-#searchtop a:link, #searchtop a:visited {
-	text-decoration: underline;
-	color: #000;
-}
 
-#searchtop a:hover {
-	color: #000;
-	text-decoration:none;
-}
-
-fieldset > span {
-	font-family: Verdana, Geneva; 
-	font-size: .75em;
-	color: #333;
-}
-
-#searchtabs a:visited, #searchtabs a {
-	color:#fff;
-}
-
-#site-top {
-	clear:both;
-}
-
-#searchtop img {
-	margin-right: .5em;
-}
-
+/* ----- ID rules ----- */
 #search-main {
 	height: 300px;
 	background-color: #000;
-	background-position: left center;
 	background-repeat: no-repeat;
+	background-position: left center;
 	clear: both;
 }
-
-#bgfade {
+#bgfade { /*Handles the gradient overlay for the background header image */
 	background: url('/images/scout/bg_overlay2.png') repeat-y 1705px 0;
 	height: 100%;
 }
-
-#search-wrap {
+#search-wrap { /* Controls translucent frame behind scoUT box */
 	float: left; 
 	width: 590px;
 	height: 290px;
 	background: rgba(0,0,0,.65);
 }
-
-#leftside {
+#leftside { /* Controls width of scoUT search box */
 	width: 550px;
 }
-
+	
+	
+	/* ----- Search Tabs (at top of box) ----- */
 #searchtabs {
 	position: relative;
 	top: 2.5em;
 	left: 2em;
 	z-index: 100;
 }
-
 #searchtabs ul {
 	margin: 0;
 	padding: 0;
 }
-
 #searchtabs li {
+	background: #397977;
 	list-style-type: none;
 	display: inline;
 	border-radius: 4px 4px 0 0 ;
@@ -109,89 +76,43 @@ fieldset > span {
 	letter-spacing: 1px;
 	z-index: 100;
 }
-
-#query {
-	border-radius: 5px;
-	border: 1px solid #BBB;
-	height: 1.75em;
-	box-shadow: inset 0 0 2px 1px #DDD;
-	padding: 0 0 1px 5px;
-}
-
-#searchbottom-links {
-	list-style-type: none;
-	display: inline;
-	font-family: Verdana, Geneva;
-	font-size: .7em;
-}
-
-#searchbottom-links a:link, #searchbottom-links a:visited {
-	color: white;
-	text-decoration: underline;
-	text-shadow: 1px 1px 2px rgba(0,0,0,.3)
-}
-
-#searchbottom-links a:hover {
-	/* color: rgba(0,0,0, .75); */
-	text-decoration: none;
-}
-
-#searchbottom-links li {
-	float: left;
-	padding: 3px 1.75em 0 1.75em;
-}
-
-.checkbox {
-	margin: .3em;
-}
-
-#searchtabs li.active {
-	background: #8bc8c6;
-}
-
-#searchtabs li.active  a { 
-	color: #222;
-}
-
-#searchtabs li {
-	background: #397977;
-}
-
 #searchtabs li:hover {
 	background: #52adaa;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
 }
-
+#searchtabs li.active, #searchtabs li.active:hover {
+	background: #9bc8c6;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+}
+#searchtabs li.active  a { 
+	color: #222;
+}
 #searchtabs a:hover {
 	text-decoration: none;
 	text-shadow: 1px 1px 2px #777777;
     filter: dropshadow(color=#777777, offx=1, offy=1);
 }
-
-#searchtabs li.active:hover {
-	background: #8bc8c6;
-	-webkit-transition: none;
-	-moz-transition: none;
-	-o-transition: none;
+#searchtabs a:visited, #searchtabs a {
+	color:#fff;
 }
+
+	/* ----- Inside search box ----- */
 #searchcontent {
+	border-radius: 4px;
 	position: relative;
 	top: 2.5em;
 	left: 1.25em;
 	width: 100%;
-	/*border: 1px solid black;*/
-	/*height: 220px;*/
-	/*background: linear-gradient(to bottom, #3b679e 0%,#2b88d9 50%,#207cca 51%,#7db9e8 100%);
-	background: -webkit-linear-gradient(top, #3b679e 0%,#2b88d9 30%,#207cca 31%,#7db9e8 100%);*/
 	-moz-box-shadow: 3px 3px 5px 2px #222;
 	-webkit-box-shadow: 2px 2px 3px 0px #444;
 	box-shadow: 2px 2px 3px 0px #444;
-	border-radius: 4px;
 }
-
 #searchtop {
+	border-radius: 4px 4px 0 0;
 	padding: 10px;
 	/* background-color: #9bc8cb; */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -204,10 +125,33 @@ fieldset > span {
 	background: -ms-linear-gradient(top,  #9bc8cb 1%,#d1e1e0 30%,#d1e1e0 50%,#8db0ae 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #9bc8cb 1%,#d1e1e0 30%,#d1e1e0 50%,#8db0ae 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc8cb', endColorstr='#8db0ae',GradientType=0 ); /* IE6-8 */
-	border-radius: 4px 4px 0 0;
 }
-
+#searchtop img {
+	margin-right: .5em;
+}	
+#searchtop p {
+	font-family: Verdana, Geneva;
+	font-size: .7em;
+	color: #222;
+	display: inline;
+}
+#searchtop a:link, #searchtop a:visited {
+	text-decoration: underline;
+	color: #000;
+}
+#searchtop a:hover {
+	color: #000;
+	text-decoration:none;
+}
+#query {
+	border-radius: 5px;
+	border: 1px solid #BBB;
+	height: 1.75em;
+	box-shadow: inset 0 0 2px 1px #DDD;
+	padding: 0 0 1px 5px;
+}
 #searchbottom {
+	border-radius: 0 0 4px 4px;
 	padding: 10px; 
 	border-top: 1px solid #eeeeee;
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -220,33 +164,29 @@ fieldset > span {
 	background: -ms-linear-gradient(top,  #52605f 1%,#637674 15%,#52605f 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #52605f 1%,#637674 15%,#52605f 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52605f', endColorstr='#52605f',GradientType=0 ); /* IE6-9 */
-	border-radius: 0 0 4px 4px;
 }
-
-.moredatabases {
+#searchbottom-links {
+	list-style-type: none;
+	display: inline;
 	font-family: Verdana, Geneva;
-	font-size: 12px;
-	margin: 5px;
-	color: white;
+	font-size: .7em;
 }
-
-.moredatabases a:link, .moredatabases a:visited {
+#searchbottom-links li {
+	float: left;
+	padding: 3px 1.75em 0 1.75em;
+}
+#searchbottom-links a:link, #searchbottom-links a:visited {
 	color: white;
-	padding: 3px;
 	text-decoration: underline;
 	text-shadow: 1px 1px 2px rgba(0,0,0,.3)
 }
-
-.moredatabases a:hover {
-	background: rgba(0,0,0,.5);
+#searchbottom-links a:hover {
+	/* color: rgba(0,0,0, .75); */
 	text-decoration: none;
 }
 
-/* .text-stroke-white {
-	text-shadow: 1px 1px 2px #777777;
-    filter: dropshadow(color=#777777, offx=1, offy=1);
-} */
 
+/* ----- Class rules ----- */
 .findbutton {
 	-moz-box-shadow:inset 0px 1px 0px 0px #c7e0d4;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #c7e0d4;
@@ -266,12 +206,33 @@ fieldset > span {
 	text-shadow:1px 1px 0px #424744;
 	float:right;
 	margin-top: -2px;
-}.findbutton:hover {
+}
+.findbutton:hover {
 	background: #52adaa;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
-}.findbutton:active {
+}
+.findbutton:active {
 	position:relative;
 	top:1px;
+}
+.checkbox {
+	margin: .3em;
+}
+.moredatabases {
+	font-family: Verdana, Geneva;
+	font-size: 12px;
+	margin: 5px;
+	color: white;
+}
+.moredatabases a:link, .moredatabases a:visited {
+	color: white;
+	padding: 3px;
+	text-decoration: underline;
+	text-shadow: 1px 1px 2px rgba(0,0,0,.3)
+}
+.moredatabases a:hover {
+	background: rgba(0,0,0,.5);
+	text-decoration: none;
 }
