@@ -77,7 +77,7 @@ echo '
 					<ul id="searchbottom-links">
 						<li style="float: left;"><a href="http://utexas.summon.serialssolutions.com/search/mobile">scoUT Mobile</a></li>
 						<li><a href="http://utexas.summon.serialssolutions.com/advanced">scoUT Advanced Search</a></li>
-						<li style="float: right;"><a href="http://scholar.google.com/">Google Scholar</a></li>
+						<li style="float: right;"><a href="http://ezproxy.lib.utexas.edu/login?url=http://scholar.google.com/">Google Scholar</a></li>
 					</ul>	
 					<div style="clear:both;"></div>
 				</div>
