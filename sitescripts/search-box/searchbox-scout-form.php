@@ -143,6 +143,7 @@ echo '
 					<div id="searchbottom">
 						<ul id="searchbottom-links">
 							<li><a href="http://catalog.lib.utexas.edu/search/X">Advanced Catalog Search</a></li>
+							<li style="float: right;"><a href="http://www.worldcat.org/account/?page=searchItems">WorldCat</a></li>
 						</ul>	
 						<div style="clear:both;"></div>
 					</div>
